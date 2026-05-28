@@ -1,10 +1,11 @@
 ---
 title: Spin-orbit coupling
-date: 2026-05-25 14:00:00 +0900
+date: 2026-05-24 14:00:00 +0900
 categories:
   - Physics
   - Condensed Matter
 tags:
+  - cond-matter
 math: true
 toc: true
 ---
@@ -127,4 +128,5 @@ This Hamiltonian is known as the **Rashba Hamiltonian**, and can be approximated
 
 ## References
 
-1. Ashcroft, N. W. & Mermin, N. D. _Solid State Physics_. (2011). p. 186
+1. Sakurai, J. J. & Tuan, S. F. _Modern Quantum Mechanics_. (1985). p. 305
+2. Ashcroft, N. W. & Mermin, N. D. _Solid State Physics_. (2011). p. 186

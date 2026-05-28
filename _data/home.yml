@@ -1,0 +1,22 @@
+hero:
+  image: /assets/img/home-hero.jpg
+  alt: "A study desk with physics notes, lattice motifs, and computation tools"
+  eyebrow: ""
+  title: Welcome to my page!
+  subtitle: "This blog posts notes on physics and computation that I am learning."
+  topics:
+    - Condensed Matter
+    - Magnetism
+    - Many-Body Physics
+    - Programming
+    - Topology
+
+intro:
+  title: About
+  body: >-
+    I write technical notes while learning condensed matter physics,
+    many-body theory, magnetism, symmetry, topology, and programming tools.
+    I am enthusiastic about numerical approaches to understand intriguing phenomena in solids.
+    This blog is a place to keep ideas precise enough to revisit.
+    I also hope that these notes can be helpful to others who are learning similar topics.
+    
