@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4806ba8a5fe50365",
+        "id": "b204ab4d4016b80e",
         "type": "tabs",
         "children": [
           {
-            "id": "fb5851aec102bd80",
+            "id": "7c91997dbd14f527",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,6 +19,20 @@
               },
               "icon": "lucide-file",
               "title": "2026-05-24-cond-matter-spin-orbit-coupling"
+            }
+          },
+          {
+            "id": "b66fca59594a673b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2026-05-21-programming-docker-tradingagents.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-05-21-programming-docker-tradingagents"
             }
           }
         ]
@@ -53,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:magnetism",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 232.5,
-    "collapsed": true
+    "width": 249.5
   },
   "right": {
     "id": "e5902761eacf4a98",
@@ -184,31 +197,52 @@
       "bases:Create new base": false
     }
   },
-  "active": "fb5851aec102bd80",
+  "active": "7c91997dbd14f527",
   "lastOpenFiles": [
-    "_site/categories/condensed-matter/index.html",
-    "_site/categories/condensed-matter",
-    "_posts/2026-05-24-magnetism-heisenberg-model.md",
-    "_posts/2026-05-27-many-body-fermi-liquid-1.md",
-    "_site/posts/cond-matter-spin-orbit-coupling/index.html",
-    "_site/posts/cond-matter-spin-orbit-coupling",
-    "_posts/2026-05-24-cond-matter-spin-orbit-coupling.md",
-    "_site/posts/magnetism-heisenberg-model-copy/index.html",
-    "_site/posts/magnetism-heisenberg-model-copy",
-    "_site/page2/index.html",
-    "_site/page2",
-    "_posts/2026-05-24-magnetism-heisenberg-model copy.md",
-    "_posts/2026-05-25-magnetism-spin-stiffness.md",
-    "_posts/2026-05-25-magnetism-antiferromagnetism.md",
+    "_posts/2026-05-21-programming-automation-launchd.md",
+    "_sass/custom/_post.scss",
+    "_site/tags/launchd/index.html",
+    "_site/tags/launchd",
+    "_site/tags/automation/index.html",
+    "_site/tags/automation",
+    "_site/categories/automation/index.html",
+    "_site/categories/automation",
+    "_posts/2026-05-21-programming-android-signingHash.md",
+    "_site/posts/programming-automation-launchd/index.html",
+    "_site/posts/programming-automation-launchd",
+    "_site/posts/programming-docker-tradingagents-copy/index.html",
+    "_posts/2026-05-21-programming-docker-tradingagents copy.md",
+    "_site/assets/img/image-fingerprint.png",
+    "assets/img/image-fingerprint.png",
+    "_site/assets/img/Screenshot 2026-05-28 at 00.26.36.png",
+    "assets/img/Screenshot 2026-05-28 at 00.26.36.png",
     "_posts/2026-05-21-programming-docker-tradingagents.md",
-    "_site/posts/magnetism-heisenberg-model/index.html",
-    "_site/posts/magnetism-heisenberg-model",
-    "_site/posts/magnetism-antiferromagnetism-copy/index.html",
-    "_posts/2026-05-25-magnetism-antiferromagnetism copy.md",
+    "_site/Pasted image 20260528003026.png",
+    "Pasted image 20260528003026.png",
+    "_posts/2026-05-21-programming-android-adb.md",
     "_posts/2026-05-20-programming-docker-basiscs.md",
+    "_posts/2026-05-27-magnetism-exchange-mechanisms.md",
+    "docs/plans/rkky-save-separate-plots-plan.md",
+    "_site/assets/img/home-hero.jpg",
+    "assets/img/home-hero.jpg",
+    "docs/plans/home-hero-intro-posts-plan.md",
+    "_site/AGENTS.md",
+    "AGENTS.md",
+    "_posts/2026-05-25-magnetism-antiferromagnetism.md",
+    "_posts/2026-05-25-magnetism-spin-stiffness copy.md",
+    "_posts/2026-05-25-magnetism-spin-stiffness.md",
+    "Untitled.md",
+    "_site/Untitled.md",
+    "_posts/2026-05-24-magnetism-heisenberg-model.md",
+    "_posts/2026-05-24-cond-matter-spin-orbit-coupling.md",
+    "_posts/2026-05-27-many-body-green-function-2.md",
+    "_posts/2026-05-27-many-body-green-function-1.md",
+    "_posts/2026-05-27-symmetry-finding-irrep-example-2.md",
+    "_posts/2026-05-27-symmetry-finding-irrep-example-1.md",
+    "_posts/2026-05-27-many-body-fermi-liquid-1.md",
+    "_posts/2026-05-25-many-body-constrained-RPA.md",
+    "_posts/2026-05-24-magnetism-heisenberg-model copy.md",
     "assets/img/image-tradingagents.png",
-    "_site/assets/img/image-tradingagents.png",
-    "_site/image-tradingagents.png",
-    "_site/Pasted image 20260527184950.png"
+    "_site/assets/img/image-tradingagents.png"
   ]
 }
