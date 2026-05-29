@@ -10,67 +10,99 @@ math: true
 toc: true
 ---
 
-## Spin stiffness
 
-{: .prompt-info }
-> **Definition of spin stiffness**
->
-> The spin stiffness is a constant that represents the change in the ground state energy of a spin system as a result of introducing a slow in-plane twist of the spins.
+## RKKY exchange
 
-One starts off with the [Heisenberg model]({{ '/posts/magnetism-heisenberg-model/' | relative_url }}):
+Magnetic exchange interactions can originate from the specific occupation of $d$ orbitals or exchange path. Another mechanism that drives exchange interaction appears in systems where localized magnetic moments coexist with itinerant electrons, such as in doped Mott insulators, orbital-selective Mott insulators, etc. In these systems, the coupling between localized spins and itinerant ones mediates an effective exchange interaction between the localized spins. This exchange interaction that is mediated by the carrier can be either ferromagnetic or antiferromagnetic, depending on the density and distance between spins.
 
-$$
-\begin{equation}
-H_{\rm Heisenberg} = \sum\limits_{\braket{ij}}J_{ij}\left[\frac{1}{2}(S^{+}_{i}S^{-}_{j} + S^{-}_{i}S^{+}_{j}) + S^{z}_{i}S^{z}_{j}\right]
-\end{equation}
-$$
+The interaction of localized electrons through the conduction electrons is the well-known RKKY exchange interaction. This exchange interaction assumes a circumstance where one local spin polarizes the itinerant electrons, and those electrons polarize another local spin. RKKY shows long-range interaction and oscillates with the distance $r$ between the localized electrons. 
 
-If one introduces a rotation of a spin at a site $i$ around the $z$-axis by an angle $\theta_{i}$, the creation and annihilation operators transform into:
-
-$$
-\begin{align}
-S^{+}_{i} &\rightarrow S^{+}_{i}e^{i\theta_{i}}, \nonumber \\
-S^{-}_{i} &\rightarrow S^{-}_{i}e^{-i\theta_{i}}
-\end{align}
-$$
-
-The sign of an angle is reversed since the two operators are in complex conjugation relations. Note that this is **not the gauge transformation** that makes the eigenvalue invariant. Plugging these into the spin Hamiltonian, the Hamiltonian is modified as:
-
-$$
-\begin{align}
-H(\theta_{i},\theta_{j}) &= \sum\limits_{\braket{ij}}J_{ij}\left[\frac{1}{2}(S^{+}_{i}S^{-}_{j}e^{i(\theta_{i}-\theta_{j})} + S^{-}_{i}S^{+}_{j}e^{-i(\theta_{i}-\theta_{j})}) + S^{z}_{i}S^{z}_{j}\right] \nonumber\\
-&\simeq \sum\limits_{\braket{ij}}J_{ij}\left[\frac{1}{2}\left(S^{+}_{i}S^{-}_{j} \left(1+i\theta_{ij}-\frac{1}{2!}\theta^{2}_{ij}\right) + S^{-}_{i}S^{+}_{j} \left(1-i\theta_{ij}-\frac{1} {2!}\theta^{2}_{ij}\right) \right) + S^{z}_{i}S^{z}_{j}\right] \nonumber \\
-&= H_{\rm Heisenberg} + \sum\limits_{\braket{ij}}J_{ij}\frac{i\theta_{ij}}{2}[S^{+}_{i}S^{-}_{j}-S^{-}_{i}S^{+}_{j}] - \sum\limits_{\braket{ij}}J_{ij}\frac{\theta^{2}_{ij}}{4}[S^{+}_{i}S^{-}_{j}+S^{-}_{i}S^{+}_{j}] \nonumber\\
-&= H_{\rm Heisenberg} + \sum\limits_{\braket{ij}} (\mathcal{J}_{ij} - \frac{1}{2}\mathcal{T}_{ij}\theta_{ij})\theta_{ij} 
-\end{align}
-$$
-
-where $\mathcal{J}\_{ij}$ is the spin current operator and $\mathcal{T}\_{ij}$ is referred to as the spin kinetic energy since they have similar forms with the fermionic current and hopping operators:
-
-$$
-\begin{align}
-\mathcal{J}_{ij} &= J_{ij}\frac{i}{2}[S^{+}_{i}S^{-}_{j}-S^{-}_{i}S^{+}_{j}], \\
-\mathcal{T}_{ij} &= J_{ij}\frac{1}{2}[S^{+}_{i}S^{-}_{j}+S^{-}_{i}S^{+}_{j}]
-\end{align}
-$$
-
-For simplicity, let us assume $J_{1}$ model and introduce a uniform twist $\theta$ between each pair of adjacent rows, i.e. $\theta\_{ij} = \theta[(\mathbf{r}\_{i}-\mathbf{r}\_{j})\cdot\hat{\mathbf{x}}]$ (see References: [1](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.50.3415) and [2](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.51.6151) for $J_{1}-J_{2}$ model). Using the perturbation theory, the energy is given by:
+For a three-dimensional free electron gas at zero temperature, the effective exchange interaction parameter can be written as:
 
 $$
 \begin{equation}
-\braket{H(\theta_{i},\theta_{j})} = \braket{H_{\rm Heisenberg}} + \braket{\sum\limits_{\braket{ij}}\mathcal{J}_{ij}\theta_{ij}} + \braket{\sum\limits_{\braket{ij}}-\frac{1}{2}\mathcal{T}_{ij}\theta^{2}_{ij}} +  \sum\limits_{\braket{ij}}\sum\limits_{\nu\neq 0}\frac{\theta^{2}_{ij}|\braket{0|\mathcal{J}_{ij}|\nu}|^{2}}{E_{0}-E_{\nu}} + O(\theta^{4})
+J(r) \propto \frac{I^{2}}{\varepsilon_{F}} \frac{\cos(2k_{F}r)}{r^{3}}
 \end{equation}
 $$
 
-where
+where $\varepsilon_{F}$ is the Fermi level, $k_{F}$ is the Fermi wave vector, and $I$ is the $s$-$d$ exchange parameter. 
+
+Assuming that $\varepsilon_{F} \gg I$, $J(r)$ appears to be second order in the following exchange interaction between localized and itinerant electrons:
+
+$$
+\begin{equation}
+I_{ik}\mathbf{S}_{i}\cdot c^{\dagger}_{k\sigma}\hat{\boldsymbol{\sigma}}c_{k\sigma}
+\end{equation}
+$$
+
+where $\hat{\boldsymbol{\sigma}}$ is the spin of itinerant (band) electrons. The physical origin of $I$ can be either $s-d$ hybridization or a local intra-atomic interaction. One can notice that the RKKY exchange is proportional to $I^{2}$. This indicates that the sign of the $I$ does not change the magnetic structure. However, the location of the localized electron relative to the period of oscillation of the exchange is crucial [Khomskii].
+
+## Double exchange
+
+The opposite case of the RKKY exchange, in which the local $s$-$d$ exchange is at least comparable with or larger than $\varepsilon_{F}$ ($\varepsilon_{F} \le I$), leads to double exchange. This exchange is connected with doping and the spontaneous appearance of metallic conductivity. For example, some oxides (e.g. Sr doped LaMnO$_{3}$) show the ferromagnetic exchange because of the magnetic ion's mixed valency [Blundell]. The simple model to describe this mechanism deals with the localized electrons and coexisting doped electrons occupying a narrow band:
+
+$$
+\begin{equation}
+H_{\rm DE} = -t\sum\limits_{\braket{ij},\sigma}c^{\dagger}_{i\sigma}c_{j\sigma} - J_{H}\sum\limits_{i}\mathbf{S}_{i}\cdot c^{\dagger}_{i\sigma}\hat{\sigma}c_{i\sigma} + J\sum\limits_{\braket{ij}}\mathbf{S}_{i}\cdot\mathbf{S}_{j}
+\end{equation}
+$$
+
+where $c_{i\sigma}$ denotes the operator of conduction electrons with intersite hopping $t$. The term with $J_{H}$ is the Hund's exchange with localized electrons with the total spin $\mathbf{S}_{i}$, and the last term is the Heisenberg exchange between the localized spins. In the presence of the itinerant electrons, the influence of the kinetic energy of electrons gives a tendency to the ferromagnetic ordering. Imagine the itinerant spin $\sigma$, and two localized spins $\mathbf{S}_{i}$ and $\mathbf{S}_{j}$. The illustration of this circumstance is shown in Figure. 5.17. For ferromagnetic configuration, the itinerant spin quickly gets mobile, but the hopping becomes suppressed for antiferromagnetic configuration, which costs large Hund's energy $J_{\rm H}$. If $t \lt J_{\rm H}$, the conduction electron will be locked at the local site in the antiferromagnetic configuration and will not be able to gain its kinetic energy. Thus, in order to realize the ferromagnetic phase, one requires a change in the magnetic structure of localized spins [Khomskii].
+
+Depending on the doping concentration, the localized spins can be ferromagnetic or canted antiferromagnetic. Here, both configurations can reduce the exchange energy. The relationship between the canting angle and the model parameters can be obtained by a simple 1D chain model. In the limit of $J_{\rm H} \gg t$, one can show that hopping between two sites with an angle $\theta$ is given by:
+
+$$
+\begin{equation}
+t_{\rm eff} = t\cos \frac{\theta}{2}
+\end{equation}
+$$
+
+where the phase factor $e^{i\phi}$ is ignored, which can play an essential role in topological effects. Then, the total energy of the Hamiltonian becomes:
+
+$$
+\begin{equation}
+E = Nz(-tx\cos \frac{\theta}{2} + JS^{2}\cos\theta)
+\end{equation}
+$$
+
+where $z$ is the number of nearest neighbors, $x$ is the doping concentration and $N$ is the number of total sites. Minimizing the energy in the angle $\theta$ reads:
 
 $$
 \begin{align}
-\braket{\sum\limits_{\braket{ij}}\mathcal{J}_{ij}\theta_{ij}} &= \frac{i\theta}{2}\braket{\sum\limits^{N}_{i}J_{i,i+x}[S^{+}_{i}S^{-}_{i+x}-S^{-}_{i}S^{+}_{i+x}]} \nonumber\\
-&= \frac{iJ\theta}{2}\sum\limits^{N}_{i} [\braket{S^{+}_{i}S^{-}_{i+x}}-\braket{S^{-}_{i}S^{+}_{i+x}}] \nonumber\\
-&= \frac{iNJ\theta}{2} [\delta_{i,i+x}-\delta_{i+x,i}] = 0, \nonumber \\
-\braket{\sum\limits_{\braket{ij}}-\frac{1}{2}\mathcal{T}_{ij}\theta^{2}_{ij}} &= -\frac{\theta^{2}}{4}\braket{\sum\limits^{N}{i}J_{i,i+x}[S^{+}_{i}S^{-}_{i+x}+S^{-}_{i+x}S^{+}_{i}]} \nonumber\\
-&= -\frac{J\theta^{2}}{4}\sum\limits^{N}_{i}[\braket{S^{+}_{i}S^{-}_{i+x}}+\braket{S^{-}_{i+x}S^{+}_{i}}] \nonumber\\
-&= -\frac{NJ\theta^{2}}{4}[\delta_{i,i+x}+\delta_{i+x,i}] 
+\frac{\partial E}{\partial \theta} &= Nz\left(\frac{tx}{2}\sin\frac{\theta}{2}-JS^{2}\sin\theta\right) = 0 \nonumber \\
+\therefore \cos\frac{\theta}{2} &= \frac{tx}{4JS^{2}}
 \end{align}
+$$
+
+This equation implies that the canting angle increases gradually with $x$ until at: $x_{c} = 4JS^{2}/t$. Here, the canted state does not appear for arbitrary small doping concentration. Instead, there exists a lower critical concentration $\tilde{x}_{c}$ where the material will remain antiferromagnetic [Khomskii].
+
+## Dzyaloshinskii-Moryia interaction
+
+The Dzyaloshinskii-Moryia interaction originates from the superexchange and the spin-orbit coupling. The Hamiltonian, including the spin-orbit coupling, reads:
+
+$$
+\begin{equation}
+H = \sum\limits_{i\sigma} \varepsilon_{i}c^{\dagger}_{i\sigma}c_{i\sigma} + \sum\limits_{\braket{ij}} [Xc^{\dagger}_{i\uparrow}c_{j\uparrow} + Yc^{\dagger}_{i\downarrow}c_{j\downarrow} + Zc^{\dagger}_{i\uparrow}c_{j\downarrow} + Wc^{\dagger}_{i\downarrow}c_{j\uparrow}]
+\end{equation}
+$$
+
+where $\varepsilon_{i}$ is the on-site energy, $i$ is the site index, and $\sigma$ is the spin index. In addition, $X$, $Y$, $Z$, and $W$ are given by:
+
+$$
+\begin{align}
+X &= \braket{\psi_{i\uparrow}|H'|\psi_{j\uparrow}} = t_{ij} + C^{z}_{ij}, \nonumber \\
+X &= \braket{\psi_{i\downarrow}|H'|\psi_{j\downarrow}} = t_{ij} - C^{z}_{ij}, \nonumber \\
+X &= \braket{\psi_{i\uparrow}|H'|\psi_{j\downarrow}} = C^{x}_{ij} - iC^{y}_{ij}, \nonumber \\
+W &= \braket{\psi_{i\downarrow}|H'|\psi_{j\uparrow}} = C^{x}_{ij} + iC^{y}_{ij}
+\end{align}
+$$
+
+where $t$ and $C$ indicate the hopping parameter and the spin-orbit coupling matrix, respectively:
+
+$$
+\begin{gather}
+H' = \frac{p^{2}}{2m} + V(r) + \frac{\hbar^{2}}{2m^{2}c^{2}}\mathbf{S}\cdot[\nabla V(\mathbf{r})\times\mathbf{p}], \\
+t_{ij} = \sum\limits_{\sigma}\braket{\psi_{i\sigma}|\frac{p^{2}}{2m} + V(r)|\psi_{j\sigma}},\\
+\mathbf{C}_{ij} = \braket{\psi_{i\sigma}|\frac{\hbar^{2}}{2m^{2}c^{2}}\mathbf{S}\cdot[\nabla V(\mathbf{r})\times\mathbf{p}]|\psi_{j\sigma'}}
+\end{gather}
 $$
