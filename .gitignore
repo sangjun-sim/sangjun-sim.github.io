@@ -29,3 +29,6 @@ assets/js/dist
 # Plan files
 AGENTS.md
 CLAUDE.md
+
+**/.[Dd][Ss]_[Ss]tore
+.[Oo]bsidian/
