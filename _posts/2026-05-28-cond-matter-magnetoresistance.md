@@ -54,8 +54,8 @@ $$
 
 Since the current density $\mathbf{j}$ is given by the sum of $n\_{i}q\_{i}\mathbf{v}\_{i}$ or the sum of $\mathbf{\sigma}\cdot\mathbf{E}$, one can write the conductivity $\mathbf{\sigma}$ with respect to $n\_{i}q\_{i}\mathbf{v}\_{i}$. Equating the $n_{i}q_{i}\mathbf{v}_{i}$ and $\mathbf{\sigma}\cdot\mathbf{E}$, the conductivity tensor is given by:
 
-<!-- Comment: 아래 conductivity tensor에서 좌변은 2×2인데 우변은 3×3으로 적혀 있어 표기가 불일치한다. 
-xy-plane 내의 transport만 고려할 경우 2×2로 통일하거나, 3×3 full tensor를 쓸 경우 좌변도 3×3으로 맞추는 것이 좋다. 
+<!-- Comment: 
+
 또한 이 tensor는 단일 carrier i에 대한 것이므로, two-carrier model에서의 total conductivity는 
 σ_total = σ^(1) + σ^(2)로 두 carrier의 기여를 합산해야 한다. 이 합산 과정이 명시되어 있지 않다. -->
 
@@ -168,7 +168,7 @@ $$
 \end{align}
 $$
 
-The additional $\dot{\mathbf{k}}\times\mathbf{\Omega}$ term is the **anomalous velocity**, which gives rise to the anomalous Hall effect even in the absence of an external magnetic field when time-reversal symmetry is broken. This directly connects the Berry curvature (defined in the [geometry note]({% raw %}{% post_url 2026-05-28-topology-geometry-in-qm %}{% endraw %})) to the transport phenomena discussed here.
+The additional $\dot{\mathbf{k}}\times\mathbf{\Omega}$ term is the **anomalous velocity**, which gives rise to the anomalous Hall effect even in the absence of an external magnetic field when time-reversal symmetry is broken. This directly connects the Berry curvature. to the transport phenomena discussed here.
 
 <!-- Comment: 위의 anomalous velocity는 Berry curvature가 0이 아닌 band에서 나타나며, 
 conductivity tensor에 추가적인 항을 기여한다:
