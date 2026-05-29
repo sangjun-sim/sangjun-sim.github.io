@@ -29,3 +29,6 @@ assets/js/dist
 # Plan files
 AGENTS.md
 CLAUDE.md
+
+**/.DS_Store
+.obsidian/workspace.json

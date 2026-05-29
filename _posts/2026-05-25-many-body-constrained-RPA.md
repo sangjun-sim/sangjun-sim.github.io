@@ -34,3 +34,8 @@ Multiplying the denominator and numerator by $\varepsilon^{-1}{r}$ gives:
 $$ \begin{align} W &= \frac{\varepsilon^{-1}{r}v}{\varepsilon^{-1}{r}-\varepsilon^{-1}{r}v(P_r + P_d)} \nonumber \\ &= \frac{W_r}{\varepsilon^{-1}_{r}-W_r(P_r + P_d)} \nonumber \\ &= \frac{W_r}{1-W_r P_d} \end{align} $$
 
 Through this expression, one can interpret $W_r$ as a screened interaction as much as $P_d$. It can be understood that this $W_r$ corresponds to the interaction (Hubbard $U$) of electrons occupying the $d$ orbital that one wants to obtain. This parameter is defined for the localized state according to the tight-binding model picture. Therefore, it must be calculated using localized orbital, not plane wave, in order to obtain the matrix elements of this $W_r$. Practically, such a localized orbital can be replaced with a Wannier function.
+
+{: .prompt-tip}
+> Can one use the charge density obtained from self-consistent calculation? 
+> 
+> — Yes. Instead, increase the number of bands. If one uses the different k points, energy cutoff, and PAW potential in SCF and cRPA calculations, one should obtain the charge density again from SCF calculation.
