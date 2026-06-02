@@ -52,16 +52,19 @@ v_{i,z} &= \mu_{i}E_{z}
 \end{align}
 $$
 
-Since the current density $\mathbf{j}$ is given by the sum of $n\_{i}q\_{i}\mathbf{v}\_{i}$ or the sum of $\mathbf{\sigma}\cdot\mathbf{E}$, one can write the conductivity $\mathbf{\sigma}$ with respect to $n\_{i}q\_{i}\mathbf{v}\_{i}$. Equating the $n_{i}q_{i}\mathbf{v}_{i}$ and $\mathbf{\sigma}\cdot\mathbf{E}$, the conductivity tensor is given by:
-
-<!-- Comment: 
-
-또한 이 tensor는 단일 carrier i에 대한 것이므로, two-carrier model에서의 total conductivity는 
-σ_total = σ^(1) + σ^(2)로 두 carrier의 기여를 합산해야 한다. 이 합산 과정이 명시되어 있지 않다. -->
+Since the current density $\mathbf{j}$ is given by the sum of $n\_{i}q\_{i}\mathbf{v}\_{i}$ or the sum of $\mathbf{\sigma}\cdot\mathbf{E}$, one can write the conductivity $\mathbf{\sigma}$ with respect to $n\_{i}q\_{i}\mathbf{v}\_{i}$:
 
 $$
 \begin{equation}
-\mathbf{\sigma} = \begin{bmatrix} \sigma_{xx} & \sigma_{xy} \\ -\sigma_{xy} & \sigma_{yy} \end{bmatrix} = n_{i}q_{i}\mu_{i} \begin{bmatrix} \frac{1}{1+\zeta^{2}_{i}} & \frac{\zeta_{i}}{1+\zeta^{2}_{i}} \\ -\frac{\zeta_{i}}{1+\zeta^{2}_{i}} & \frac{1}{1+\zeta^{2}_{i}} \end{bmatrix}
+\mathbf{j} = n_{1}q_{1}\mathbf{v}_{1} + n_{2}q_{2}\mathbf{v}_{2} = (\boldsymbol{\sigma}^{1} + \boldsymbol{\sigma}^{2})\cdot\mathbf{E}
+\end{equation}
+$$
+
+The total conductivity tensor $\boldsymbol{\sigma} = \boldsymbol{\sigma}^{2} + \boldsymbol{\sigma}^{2}$ is given by:
+
+$$
+\begin{equation}
+\mathbf{\sigma} = \begin{bmatrix} \sigma_{xx} & \sigma_{xy} \\ -\sigma_{xy} & \sigma_{yy} \end{bmatrix} = \sum_{i} \begin{bmatrix} \sigma^{i}_{xx} & \sigma^{i}_{xy} \\ -\sigma^{i}_{xy} & \sigma^{i}_{yy} \end{bmatrix} = \sum_{i} n_{i}q_{i}\mu_{i} \begin{bmatrix} \frac{1}{1+\zeta^{2}_{i}} & \frac{\zeta_{i}}{1+\zeta^{2}_{i}} \\ -\frac{\zeta_{i}}{1+\zeta^{2}_{i}} & \frac{1}{1+\zeta^{2}_{i}} \end{bmatrix}
 \end{equation}
 $$
 
@@ -69,20 +72,15 @@ with:
 
 $$
 \begin{equation}
-\sigma_{xx} = \sigma_{yy} = n_{i}q_{i}\mu_{i}\frac{1}{1+\zeta^{2}_{i}},~\sigma_{xy} = n_{i}q_{i}\mu_{i}\zeta_{i}\frac{1}{1+\zeta^{2}_{i}}
+\sigma^{i}_{xx} = \sigma^{i}_{yy} = n_{i}q_{i}\mu_{i}\frac{1}{1+\zeta^{2}_{i}},~\sigma^{i}_{xy} = n_{i}q_{i}\mu_{i}\zeta_{i}\frac{1}{1+\zeta^{2}_{i}}
 \end{equation}
 $$
 
-<!-- Comment: 여기서 two-carrier model의 total conductivity tensor를 먼저 구성해야 한다:
-σ^(tot)_xx = σ^(1)_xx + σ^(2)_xx, σ^(tot)_xy = σ^(1)_xy + σ^(2)_xy.
-이 total σ tensor를 invert해야 two-carrier resistivity가 나온다. 
-이 중간 과정이 생략되어 있으므로 eq. (7)의 ΔR/R 결과가 갑자기 등장하는 느낌이 있다. -->
-
-By doing so, one can obtain the explicit form of the resistivity tensor $\rho_{\alpha\beta}$ ($\alpha$, $\beta$ = $x, y$). The inverse matrix of the conductivity tensor directly leads to the resistivity tensor:
+By doing so, one can obtain the explicit form of the resistivity tensor $\rho_{\alpha\beta}$ ($\alpha$, $\beta$ = $x, y$). The inverse matrix of the total conductivity tensor directly leads to the resistivity tensor:
 
 $$
 \begin{equation}
-\rho = \frac{1}{\sigma_{xx}\sigma_{yy} + \sigma^{2}_{xy}} \begin{bmatrix} \sigma_{yy} & -\sigma_{xy} \\ \sigma_{xy} & \sigma_{xx} \end{bmatrix}
+\boldsymbol{\rho} = \frac{1}{\sigma_{xx}\sigma_{yy} + \sigma^{2}_{xy}} \begin{bmatrix} \sigma_{yy} & -\sigma_{xy} \\ \sigma_{xy} & \sigma_{xx} \end{bmatrix}
 \end{equation}
 $$
 
@@ -223,12 +221,6 @@ where $\gamma = 1/2 - \phi_B / 2\pi$ and $\phi_B$ is the Berry phase accumulated
 
 이는 geometry note에서 정의한 Berry phase γ = ∮ dk · A(k) 를 
 실험적으로 측정하는 가장 직접적인 방법 중 하나이다.
-
-추가로, quantum metric g_μν도 transport에 기여한다. 최근 연구에서는 
-superfluid weight, orbital magnetic susceptibility, nonlinear Hall effect 등이 
-quantum metric과 관련됨이 밝혀졌다. 이러한 연결은 quantum geometric tensor 
-T_μν = g_μν - (i/2)Ω_μν의 실부(metric)와 허부(curvature) 모두가 
-물리적 관측량에 기여함을 보여준다. -->
 
 <!-- Comment: [질문에 대한 답변] "왜 xx-direction인가?"
 
