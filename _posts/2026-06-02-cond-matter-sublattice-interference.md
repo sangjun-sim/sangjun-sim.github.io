@@ -21,6 +21,11 @@ toc: true
 
 van Hove singularity에서는 density of states가 divergent하고 Fermi surface nesting이 발생할 수 있기 때문에 SDW나 $d$-wave 초전도와 같은 Fermi surface instabilities를 trigger할 수 있다. 따라서 Van Hove filling 근처의 Fermi surface topology와 density of states만 보면, 서로 비슷한 band structure를 갖는 lattice들은 비슷한 instability scale을 가질 것처럼 보인다. 하지만 실제로 weak-coupling limit에서의 vertex analysis와 perturbative RG 계산에 의하면 Kagome Hubbard model과 Honeycomb Hubbard model은 van Hove filling에서 서로 다른 instability scale을 보인다는 것이 밝혀졌다([Kiesel 2012](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.86.121105)). 
 
+{% include pdf-viewer.html
+  src="/pdfs/2012-kiesel-sublattice-interference-kagome-hubbard.pdf"
+  title="Kiesel 2012, Sublattice interference in the kagome Hubbard model"
+%}
+
 카고메 격자에서 "왜 Fermi surface만으로 예상되는 instability가 실제로는 약하게 보이는지"에 대한 이유를 sublattice interference로 설명하였다. Metallic한 시스템에서 instability는 Fermi level 근처의 state들이 얼마나 산란을 일으키는지에 따라 결정된다. Kagome 격자 시스템과 같은 경우에는 Fermi level 근처의 Bloch state가 sublattice 분포에 대한 정보를 가지고 있다. 이는 interaction vertex를 계산할 때 포함되는데, nesting이 완벽하더라도 propagator의 sublattice character가 다르면 scattering matrix element가 작아져 local Coulomb interaction이 작아지게 된다. 이것이 바로 sublattice interference mechanism이다.
 
 <br>

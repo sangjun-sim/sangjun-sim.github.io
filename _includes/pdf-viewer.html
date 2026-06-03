@@ -1,0 +1,15 @@
+{% assign pdf_title = include.title | default: "PDF document" %}
+
+<figure class="pdf-viewer">
+  <iframe
+    class="pdf-viewer__frame"
+    src="{{ include.src | relative_url }}"
+    title="{{ pdf_title | escape }}"
+    loading="lazy">
+  </iframe>
+  <figcaption class="pdf-viewer__caption">
+    <a href="{{ include.src | relative_url }}" target="_blank" rel="noopener">
+      Open PDF
+    </a>
+  </figcaption>
+</figure>

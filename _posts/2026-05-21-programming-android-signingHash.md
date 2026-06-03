@@ -72,7 +72,7 @@ If one does not add a hash key when freeRASP is enabled, the error `Unhandled Ex
 ``` shell
 flutter run --release \\
   --dart-define=RASP_WATCHER_MAIL=email@example.com \\
-  --dart-define=RASP_RELEASE_CERT_HASHES="key"
+  --dart-define=RASP_RELEASE_CERT_HASHES="HASH_KEY"
 ```
 
 **Issue**. freeRASP 7.5.1 is a library built and tested on AGP (Android Gradle Plugin) 8.8.1. However, with the update to AGP 9.x, it is reported that global option validation for consumer ProGuard files has become more *stricter*. Since freeRASP is responsible for controlling runtime security and flattening the APK build output structure is out of scope of its responsibility, this update can be considered to have been applied correctly.
