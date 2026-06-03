@@ -3,3 +3,22 @@ article[data-toc] > .content > p {
   word-break: keep-all;
   overflow-wrap: break-word;
 }
+
+.pdf-viewer {
+  margin: 1.5rem 0;
+}
+
+.pdf-viewer__frame {
+  display: block;
+  width: 100%;
+  min-height: min(78vh, 900px);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--card-bg);
+}
+
+.pdf-viewer__caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: right;
+}
