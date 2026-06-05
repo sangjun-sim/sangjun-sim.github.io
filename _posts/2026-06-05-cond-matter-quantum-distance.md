@@ -17,7 +17,7 @@ toc: true
 
 ## Quantum distance
 
-The quantum distance is defined as the infinitesimal difference between quantum states by the variation $d\boldsymbol{\lambda}$ ([Cheng-2013](http://arxiv.org/abs/1012.1337)):
+The quantum distance is defined as the infinitesimal difference between quantum states by the variation $d\boldsymbol{\lambda}$ ([Cheng-2013](https://arxiv.org/abs/1012.1337)):
 
 $$
 \begin{align*}
