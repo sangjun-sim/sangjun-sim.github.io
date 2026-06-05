@@ -3,7 +3,7 @@ title: The Value of Science
 date: 2026-06-03 13:00:00 +0900
 categories:
   - Essay
-  - The Value of Science
+  - Philosophy
 tags:
   - essay
   - philosophy

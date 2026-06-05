@@ -2,8 +2,8 @@
 title: Korean Alphabet
 date: 2026-05-29 23:00:00 +0900
 categories:
+  - Essay
   - Language
-  - Korean
 tags:
   - language
   - culture
