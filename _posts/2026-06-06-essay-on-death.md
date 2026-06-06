@@ -38,3 +38,4 @@ Experience is repeated. Joy, hunger, grief, erotic desire, fear, and pain have o
 
 Therefore, the non-uniqueness of experience weakens one of human vanities. This does not tell us that nothing matters. Instead, this tells us that we are not cosmically privileged.
 
+ 
