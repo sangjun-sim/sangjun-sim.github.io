@@ -134,6 +134,7 @@ Bernevig[PRL 124, 167002 (2020)], S. Das Sarma[PRB 102, 165118 (2020)]은  quant
 ## Relationship between $g_{\mu\nu}$ and quantum distance
 
 Recall that the quantum distance is determined by the **real part** of $\Braket{\partial_{\mu}\psi(\boldsymbol{\lambda})\vert\partial_{\nu}\psi(\boldsymbol{\lambda})}$, which had to be transformed into the real part of $\mathfrak{G}_{\mu\nu}$ to be gauge invariant. This statement is rewritten as:
+
 $$
 \begin{equation}
 ds^{2} = g_{\mu\nu}d\lambda^{\mu}d\lambda^{\nu}
@@ -179,6 +180,7 @@ $$
 $$
 
 Therefore, $\braket{\psi(\boldsymbol{\lambda})\vert\psi(\boldsymbol{\lambda}+d\boldsymbol{\lambda})}$ is given by:
+
 $$
 \begin{align*}
 \braket{\psi(\boldsymbol{\lambda})|\psi(\boldsymbol{\lambda}+d\boldsymbol{\lambda})} &= 1-\frac{1}{2}(\gamma_{\mu\nu}-A_{\mu}(\boldsymbol{\lambda})A_{\nu}(\boldsymbol{\lambda})) d\lambda^{\mu}d\lambda^{\nu} \\
@@ -209,7 +211,7 @@ When the state is given by a density matrix, the first term in the equation is c
 
 ## Example. Spin-$1/2$ system
 
-A spinor of spin-$1/2$ is represented as:
+A spin-$1/2$ spinor is represented as:
 
 $$
 \begin{equation}
