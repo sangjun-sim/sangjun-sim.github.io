@@ -17,7 +17,7 @@ toc: true
 
 ## Quantum distance
 
-The quantum distance is defined as the infinitesimal difference between quantum states by the variation $d\boldsymbol{\lambda}$ ([Cheng-2013](https://arxiv.org/abs/1012.1337)):
+The quantum distance is defined as the infinitesimal difference between quantum states by the variation $d\boldsymbol{\lambda}$:
 
 $$
 \begin{align*}
@@ -269,3 +269,9 @@ g_{\mu\nu} &= \begin{bmatrix} g_{\theta\theta} & g_{\theta\varphi} \\ g_{\varphi
 $$
 
 which implies that there are a nontrivial quantum metric and Berry curvature.
+
+---
+
+## References
+
+1. Cheng, R. Quantum Geometric Tensor (Fubini-Study Metric) in Simple Quantum System: A pedagogical Introduction. *arXiv* (2010).
