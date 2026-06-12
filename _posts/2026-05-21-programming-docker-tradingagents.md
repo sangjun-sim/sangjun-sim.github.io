@@ -60,3 +60,18 @@ $ docker exec -it tradingagents-tradingagents-ollama-1 tradingagents
 If one does it correctly, one gets the following screen:
 
 ![main-page-tradingagents](assets/img/image-tradingagents.png)
+
+## Saving Reports as an md file
+
+`TradingAgents` saves the complete report file `complete_report.md` in a `~/.tradingagents/` directory. To access this directory, one logs into the container first:
+
+``` shell
+$ docker exec -it tradingaents-tradingagents-1 bash
+```
+
+The output reports file is saved in `~/.tradingagents/logs/<market>/<DATE>/reports/` as a `final_trade_decision.md` file. One can copy this file and paste it into the local directory by using:
+
+``` shell
+$ docker cp tradingaents-tradingagents-1:/home/appuser/.tradingagents/logs/<market>/<DATE>/reports/final_trade_decision.md .
+```
+

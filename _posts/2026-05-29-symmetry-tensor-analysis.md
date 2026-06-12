@@ -2,11 +2,12 @@
 title: Tensor Analysis
 date: 2026-05-29 09:00:00 +0900
 categories:
-  - Math
-  - Tensor Analysis
+  - Physics
+  - Symmetry
 tags:
-  - math
   - mathematical-physics
+  - symmetry
+  - physics
 math: true
 toc: true
 ---

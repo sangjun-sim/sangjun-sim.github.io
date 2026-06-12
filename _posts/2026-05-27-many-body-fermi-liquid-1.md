@@ -25,7 +25,7 @@ This results from the energy conservation and Pauli's principle. If the quasipar
 {: .prompt-tip }
 > Q2. Why does occupancy parameterize the excitation energy?
 
-The Fermi liquid theory assumed that the low-energy eigenstates are labeled by $\mathbf{p}$ and $\sigma$. Here, the labeling indicates that there is some operator that commutes with the Hamiltonian and forms the compatible set of commuting operators. In addition, labeling by momentum $\mathbf{p}$ and spin $\sigma$ implicitly indicates that there is translational symmetry and $SU(2)$ symmetry. The operator that satisfies these conditions is the density operator: $n^{(0)}\_{\mathbf{p}\sigma} = c^{\dagger}\_{\mathbf{p}\sigma} c_{\mathbf{p}\sigma}$.
+The Fermi liquid theory assumes that the low-energy eigenstates are labeled by $\mathbf{p}$ and $\sigma$. Here, the labeling indicates that there is some operator that commutes with the Hamiltonian and forms the compatible set of commuting operators. In addition, labeling by momentum $\mathbf{p}$ and spin $\sigma$ implicitly indicates that there is translational symmetry and $SU(2)$ symmetry. The operator that satisfies these conditions is the density operator: $n^{(0)}\_{\mathbf{p}\sigma} = c^{\dagger}\_{\mathbf{p}\sigma} c_{\mathbf{p}\sigma}$.
 
 However, if the interaction $V$ turns on, $[n^{(0)}\_{\mathbf{p}\sigma}, V] \neq 0$ and the eigenstates generally cannot be labeled by $\mathbf{p}$ and $\sigma$. Here comes the **adiabatic connection**. It connects the eigenstate of noninteracting Hamiltonian $\ket{\Psi^{(0)}\_{n}}$ and that of interacting one:
 
@@ -43,7 +43,7 @@ $$
 \end{equation}
 $$
 
-where $E^{(0)}\_{\mathbf{p}\sigma}-\mu = \delta\mathcal{E}/\delta n_{\mathbf{p}\sigma}$ and $f_{\mathbf{p}\sigma,\mathbf{p}'\sigma'} = \delta^{2} \mathcal{E} / \delta n_{\mathbf{p}\sigma}\delta n_{\mathbf{p}'\sigma'}|\_{\delta n_{\mathbf{p}''\sigma''} = 0}$. Naturally, the quantity $\delta n_{\mathbf{p}\sigma}$ is nonzero only on the shell of Fermi surface, because the excitations occur on the Fermi surface. In addition, Fermi liquid function $f_{\mathbf{p}\sigma,\mathbf{p}'\sigma'}$ is expanded as Legendre polynomials. This is because of the **spherical symmetry** implicilty assumed in Fermi liquid theory.
+where $E^{(0)}\_{\mathbf{p}\sigma}-\mu = \delta\mathcal{E}/\delta n_{\mathbf{p}\sigma}$ and $f_{\mathbf{p}\sigma,\mathbf{p}'\sigma'} = \delta^{2} \mathcal{E} / \delta n_{\mathbf{p}\sigma}\delta n_{\mathbf{p}'\sigma'}\vert\_{\delta n_{\mathbf{p}''\sigma''} = 0}$. Naturally, the quantity $\delta n_{\mathbf{p}\sigma}$ is nonzero only on the shell of Fermi surface, because the excitations occur on the Fermi surface. In addition, Fermi liquid function $f_{\mathbf{p}\sigma,\mathbf{p}'\sigma'}$ is expanded as Legendre polynomials. This is because of the **spherical symmetry** implicilty assumed in Fermi liquid theory.
 
 *Additional note*. The fact that symmetry is lowered does **not** mean that labeling is entirely impossible. If there is discrete translational symmetry such as a lattice, $\mathbf{p}$ will be within the Brillouin zone, and if spin-orbit coupling is introduced, total angular momentum can be used instead of $\sigma$. However, if symmetry is spontaneously broken (e.g. ferromagnet), $Z_{\mathbf{p}} \sim 0$ (Mott insulator), or there is a topological phase transition (Cooper condensation), the assumption does not work and Fermi liquid theory fails.
 
