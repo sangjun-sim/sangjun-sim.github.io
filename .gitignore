@@ -30,5 +30,10 @@ assets/js/dist
 AGENTS.md
 CLAUDE.md
 
+# Markdown publishing policy
+*.md
+!_posts/*.md
+!_tabs/*.md
+
 **/.[Dd][Ss]_[Ss]tore
 .[Oo]bsidian/
