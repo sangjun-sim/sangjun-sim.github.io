@@ -52,7 +52,7 @@ Here, materialism provides at least one fact: Experience does not occur independ
 
 Negative is not simply the opposite of positive. Negative often takes precedence in a scene of experience: Fear narrows the range of possible actions, and humiliation repeats in memory. This precedence is not only a matter of strength. It is also a matter of time. Negative feelings remain as memory, avoidance, and physical tension even after the event ends.
 
-In psychological literature, it has been discovered that the tendency of negative experiences to have a greater impact than positive ones. The review by Baumeister et al. [4] summarizes this tendency with a statement: "bad is stronger than good." 
+In psychological literature, it has been discovered that the tendency of negative experiences has a greater impact than positive ones. The review by Baumeister et al. [4] summarizes this tendency with a statement: "bad is stronger than good." 
 
 Therefore, continuing to live is not a simple addition of time. It involves repeatedly exposing oneself to the negative states, which is asymmetric.
 
