@@ -1,6 +1,6 @@
 ---
 title: Experiences in JeonJu
-date: 2026-06-04 09:00:00 +0900
+date: 2019-12-25 09:00:00 +0900
 categories:
   - Essay
   - Photograph
@@ -9,7 +9,7 @@ tags:
   - photograph
 math: true
 toc: true
-media_subpath: /assets/img/albums/2026-jeonju
+media_subpath: /assets/img/albums/2019-jeonju
 album_title: JeonJu Korean Traditional Village (2019. 12. 25)
 album_ratio: 6 / 3
 album_fit: contain
