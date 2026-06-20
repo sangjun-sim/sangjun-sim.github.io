@@ -1,6 +1,6 @@
 ---
 title: Experiences in Thailand
-date: 2026-06-06 18:00:00 +0900
+date: 2026-04-20 18:00:00 +0900
 categories:
   - Essay
   - Photograph
