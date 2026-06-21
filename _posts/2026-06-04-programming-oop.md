@@ -10,6 +10,7 @@ tags:
   - objective-oriented-programming
 math: true
 toc: true
+published: false
 ---
 
 **추상화**. 구체적인 구현 방식(How)을 숨기는 대신, 사용자가 알아야 할 인터페이스(What, 무엇을 할 것인가)만 노출하는 것이다.
