@@ -12,6 +12,7 @@ tags:
   - symmetry
 math: true
 toc: true
+published: false
 ---
 
 {: .prompt-info }
