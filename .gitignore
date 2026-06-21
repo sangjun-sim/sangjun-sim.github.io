@@ -34,6 +34,9 @@ CLAUDE.md
 *.md
 !_posts/*.md
 !_tabs/*.md
+_posts/2026-06-03-topology-ssh-model.md
+_posts/2026-06-04-programming-oop.md
+_posts/2026-05-28-cond-matter-magnetoresistance.md
 
 **/.[Dd][Ss]_[Ss]tore
 .[Oo]bsidian/

@@ -24,3 +24,4 @@ album_photos:
 
 {% include photo-album.html %}
 
+
