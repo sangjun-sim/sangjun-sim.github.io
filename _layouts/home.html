@@ -49,6 +49,99 @@ layout: default
   {% endfor %}
 {% endif %}
 
+{% assign notice_page = site.tabs | where: 'slug', 'notice' | first %}
+{% if paginator.page == 1 and notice_page %}
+  {% assign notice_banner = notice_page.banner %}
+  {% unless notice_banner.enabled == false %}
+    {% assign notice_body = notice_page.content | markdownify | strip %}
+    {% if notice_body != '' %}
+      {% assign notice_id = notice_banner.id | default: notice_page.url %}
+
+      {% if notice_banner.dismissible %}
+        <script>
+          (() => {
+            try {
+              if (localStorage.getItem('sangjun-home-notice-dismissed') === '{{ notice_id }}') {
+                document.documentElement.classList.add('home-notice-dismissed');
+              }
+            } catch (error) {
+              // Keep the notice visible when storage is unavailable.
+            }
+          })();
+        </script>
+      {% endif %}
+
+      <aside
+        class="home-notice"
+        aria-labelledby="home-notice-title"
+        data-home-notice
+        data-home-notice-id="{{ notice_id }}"
+      >
+        <div class="home-notice__content">
+          {% if notice_banner.label %}
+            <p class="home-notice__label">{{ notice_banner.label }}</p>
+          {% endif %}
+
+          <p id="home-notice-title" class="home-notice__title">
+            {{ notice_page.title | default: 'Notice' }}
+          </p>
+
+          <div class="home-notice__body">
+            {{ notice_body }}
+          </div>
+        </div>
+
+        <a class="home-notice__link" href="{{ notice_page.url | relative_url }}">
+          {{ notice_banner.link_label | default: 'Read notice' }}
+        </a>
+
+        {% if notice_banner.dismissible %}
+          <button
+            class="home-notice__dismiss"
+            type="button"
+            aria-label="{{ notice_banner.dismiss_label | default: 'Dismiss notice' }}"
+            data-home-notice-dismiss
+          >
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
+        {% endif %}
+      </aside>
+
+      {% if notice_banner.dismissible %}
+        <script>
+          (() => {
+            const notice = document.querySelector('[data-home-notice]');
+
+            if (!notice) {
+              return;
+            }
+
+            const dismissButton = notice.querySelector('[data-home-notice-dismiss]');
+
+            if (!dismissButton) {
+              return;
+            }
+
+            dismissButton.addEventListener('click', () => {
+              const noticeId = notice.dataset.homeNoticeId;
+
+              if (noticeId) {
+                try {
+                  localStorage.setItem('sangjun-home-notice-dismissed', noticeId);
+                } catch (error) {
+                  // The visual dismiss still works even when storage is unavailable.
+                }
+              }
+
+              notice.hidden = true;
+            });
+          })();
+        </script>
+      {% endif %}
+    {% endif %}
+  {% endunless %}
+{% endif %}
+
 {% if paginator.page == 1 and home %}
   <section class="home-hero" aria-label="Homepage introduction">
     <img
