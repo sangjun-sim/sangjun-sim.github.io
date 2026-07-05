@@ -29,7 +29,7 @@ $$
 H_{\rm XY} \simeq -J\sum\limits_{\braket{ij}}\left[1-\frac{1}{2}(\phi_{i}-\phi_{j})^{2}\right] = E + \frac{J}{2}\sum\limits_{\braket{ij}}(\phi_{i}-\phi_{j})^{2}
 $$
 
-where $E$ is the sum of the exchange interaction between the site $i$ and $j$. The second term must be highlighted: The form is applied to the discrete lattice model. Here, the sum over the first nearest neighbors corresponds to the discrete Laplacian operator; see H. J. Jensen's Lecture note. However, in the continuum limit, where the system size $L$ is larger than the lattice spacing $a$, $\phi_{i}$ becomes $\phi(\mathbf{r}_{i})$. Thus, the second term is expressed as:
+where $E$ is the sum of the exchange interaction between the site $i$ and $j$. The second term must be highlighted: The form is applied to the discrete lattice model. Here, the sum over the first nearest neighbors corresponds to the discrete Laplacian operator; see H. J. Jensen's lecture note [2]. However, in the continuum limit, where the system size $L$ is larger than the lattice spacing $a$, $\phi_{i}$ becomes $\phi(\mathbf{r}_{i})$. Thus, the second term is expressed as:
 
 $$
 \begin{equation}
@@ -86,3 +86,4 @@ In addition, the transition for the creation of a topological defect below the B
 ## References
 
 1. Araújo, M. & Sacramento, P. _Topology in Condensed Matter_. p. 151
+2. Jensen, H. J. Lecture notes on the XY model. MIT 8.334 Statistical Mechanics II: Statistical Physics of Fields. https://www.mit.edu/~levitov/8.334/notes/XYnotes1.pdf (accessed 5 July 2026).
