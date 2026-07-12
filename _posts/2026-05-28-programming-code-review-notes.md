@@ -10,9 +10,6 @@ tags:
 math: true
 toc: true
 ---
-{: .prompt-info}
-> In progress!
-
 
 ## Obfuscation
 
