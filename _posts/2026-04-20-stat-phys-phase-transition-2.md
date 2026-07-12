@@ -12,16 +12,16 @@ toc: true
 ---
 
 
-## Beyond spin waves
+## Beyond spin waves: 2D $XY$ model
 
-The phase transition associated with the vortices is called the Berezinskii–Kosterlitz–Thouless (BKT) transition. This transition occurs in a 2D $XY$ model (no $z$-component magnetization), e.g., a 2D superconductor with the complex order parameter with an arbitrary phase factor and 2D $XY$ magnets. The ground state should break this symmetry since it has the $U(1)$ symmetry. Accordingly, if there is a gradient of the phase factor, there is a corresponding probability current (that is proportional to $\psi^{\*}\partial_i\phi$). At any temperature, $\phi$ is disordered by thermally populated topological defects (vortex and anti-vortex, which are the global excitations). At $T < T_{BKT}$, the vortices attract to each other. The correlation function decays as a power law. However, $T > T_{BKT}$, it decays exponentially, and the vortices are no longer bound and move freely. This cannot be elucidated by Landau's paradigm; that is, it is **not** a symmetry-breaking transition (there is no divergence on the thermodynamic variables). Experimentally, Resnick, *et al*. measured the resistance of 2D superconductors across the BKT transition and discovered that $V \propto I^3$ at $T_{BKT}$ [PRL 47, 1542 (1981)].
+The phase transition associated with the vortices is called the Berezinskii–Kosterlitz–Thouless (BKT) transition. This transition occurs in a 2D $XY$ model (no $z$-component magnetization), e.g., a 2D superconductor with the complex order parameter with an arbitrary phase factor and 2D $XY$ magnets. If there is a gradient of the phase factor, there is a corresponding probability current (that is proportional to $\text{Im}[\psi^{\*}\partial_i\phi]$). Goldstone fluctuations destroy long-range order at $T > 0$. Topological defects (vortex and anti-vortex, which are the global excitations) play a distinct role. At $T < T_{BKT}$, the vortices attract to each other. The correlation function decays as a power law. However, $T > T_{BKT}$, it decays exponentially, and the vortices are no longer bound and move freely. This cannot be elucidated by Landau's paradigm; that is, it is **not** a symmetry-breaking transition (there is no divergence on the thermodynamic variables). Experimentally, Resnick, *et al*. measured the resistance of 2D superconductors across the BKT transition and discovered that $V \propto I^3$ at $T_{BKT}$ [PRL 47, 1542 (1981)].
 
 {: .prompt-info}
-> Q. How to distinguish between symmetry-broken phase transition and topological phase transition? 
+> **Q. How to distinguish between symmetry-broken phase transition and topological phase transition?**
 
 It can be distinguished by the presence of an order parameter.
 
-### 2D $XY$ model
+## High-temperature limit of correlation function
 
 The Hamiltonian for the 2D $XY$ model is described as:
 
@@ -35,7 +35,7 @@ where $\mathbf{S}_i = (\cos{\theta_i},\sin{\theta_i})$. The partition function i
 
 $$
 \begin{equation}
-    Z = \prod_{i=1}^{N} \int^{2\pi}_{0} \frac{d\theta}{2\pi} e^{K\sum_{\braket{i,j}}\cos{(\theta_i-\theta_j)}}
+    Z = \prod_{i=1}^{N} \int^{2\pi}_{0} \frac{d\theta_{i}}{2\pi} e^{K\sum_{\braket{i,j}}\cos{(\theta_i-\theta_j)}}
 \end{equation}
 $$
 
@@ -43,29 +43,47 @@ The correlation function is given by:
 
 $$
 \begin{equation}
-    \braket{\mathbf{S}_i\cdot\mathbf{S}_j} = \braket{\cos{(\theta_0-\theta_r)}} = \frac{1}{Z}\left[\prod_{i=1}^{N} \int^{2\pi}_{0} \frac{d\theta_i}{2\pi} \cos{(\theta_0-\theta_r)} e^{K\sum_{\braket{i,j}}\cos{(\theta_i-\theta_j})}\right]
+    \braket{\mathbf{S}_\mathbf{0}\cdot\mathbf{S}_\mathbf{r}} = \braket{\cos{(\theta_\mathbf{0}-\theta_\mathbf{r})}} = \frac{1}{Z}\prod_{i=1}^{N} \left[\int^{2\pi}_{0} \frac{d\theta_i}{2\pi}\right] \cos{(\theta_\mathbf{0}-\theta_\mathbf{r})} e^{K\sum_{\braket{i,j}}\cos{(\theta_i-\theta_j})}
 \end{equation}
 $$
 
-By calculating the correlation function with high-$T$ expansion ($K \ll 1$), we can guess the point where the phase transition occurs. The correlation function is then approximated by
+By calculating the correlation function with high-$T$ expansion ($K \ll 1$), we can guess the point where the phase transition occurs. The correlation function is then approximated by:
 
 $$
 \begin{equation}
-    \braket{\mathbf{S}_0\cdot\mathbf{S}_r} \sim \frac{1}{Z}\prod_{i=1}^{N} \int^{2\pi}_{0} \frac{d\theta_i}{2\pi} \cos{(\theta_0-\theta_r)} \prod_{\braket{i,j}} (1 + K\cdot\cos{(\theta_i-\theta_j)})
+    \braket{\mathbf{S}_\mathbf{0}\cdot\mathbf{S}_\mathbf{r}} \sim \frac{1}{Z}\prod_{i=1}^{N} \left[\int^{2\pi}_{0} \frac{d\theta_i}{2\pi} \right] \cos{(\theta_\mathbf{0}-\theta_\mathbf{r})} \prod_{\braket{i,j}} (1 + K\cos{(\theta_i-\theta_j)})
 \end{equation}
 $$
 
-where the summation is transformed into the product from the exponential. Because the integration of $\cos{(\theta_0-\theta_r)}$ over $\theta_0$ is zero, the $O(1)$ term in the product does not contribute to the sum at all. This goes the same for the $O(K^1)$ term. The leading term must include the multiplication of cosine functions with an even number of $\theta_i$ so that the integration can be non-zero. Then, the correlation function is expressed as
+where the summation is transformed into the product from the exponential. Because the integration of $\cos{(\theta_i-\theta_j)}$ over $\theta_i$ is zero;
 
 $$
 \begin{equation}
-    \braket{\mathbf{S}_0\cdot\mathbf{S}_r} = \frac{K^r}{2^r} = e^{-r/\xi}
+\int^{2\pi}_{0} \frac{d\theta_{1}}{2\pi} \cos(\theta_{1}-\theta_{2}) = 0
 \end{equation}
 $$
 
-#### Review.
+the $O(1)$ term in the product does not contribute to the sum at all. This goes the same for the $O(K^1)$ term. The leading term must include the multiplication of cosine functions with a connected chain of bonds linking sites $\mathbf{0}$ and $\mathbf{r}$, so that the integration can be non-zero:
 
-The vortex is topologically equivalent (homotopic) to the diverging spin configuration since these are the same when we rotate the whole configuration. The anti-vortex is, however, not topologically equivalent. The quantity to identify them is the vorticity or the winding number which is defined as
+$$
+\begin{equation}
+\int^{2\pi}_{0} \frac{d\theta_{2}}{2\pi}\cos(\theta_{1}-\theta_{2})\cos(\theta_{2}-\theta_{3}) = \frac{1}{2}\cos(\theta_{1}-\theta_{3})
+\end{equation}
+$$
+
+Then, the correlation function is expressed as the exponential decay:
+
+$$
+\begin{equation}
+    \braket{\mathbf{S}_\mathbf{0}\cdot\mathbf{S}_\mathbf{r}} \simeq \frac{K^r}{2^r} = e^{-r/\xi}
+\end{equation}
+$$
+
+with $\xi \simeq 1/\ln(2/K)$.
+
+### Review
+
+The vortex is topologically equivalent (homotopic) to the diverging spin configuration since these are the same when one rotates the whole configuration. The anti-vortex is, however, not topologically equivalent. The quantity to distinguish between them is the vorticity or the winding number which is defined as:
 
 $$
 \begin{equation}
@@ -73,19 +91,23 @@ $$
 \end{equation}
 $$
 
-where the integral counts how many times the $2\pi$ angle is rotated around the contour. (It is sometimes called skyrmion number for $S^2$.) If one traces the direction of a spin on the lattice along a circular loop, one should count the number of spins in the same direction. A high winding number $W > 1$ is not usually observed. This can be experimentally observed in a superconductor; \textit{giant vortex}. The homotopic vortices can be distinguished by using XMCD (X-ray Magnetic Circular Dichroism), Lorentz TEM, and NV (Nitrogen vacancy; Nitrogen defect in a diamond) center magnetometry that images the local spin at a nanometer scale. Let us there is a continuous function $f$ such that $f(0) = f(2\pi)$ that maps between $S^{1}\_{a}$ and $S^{1}\_{b}$ with the parameter; $\theta$. Note that one needs the closed space to define the winding number. Here the winding number classifies the topology and a set of functions can form a group which is called the first homotopy group $\pi_1(S^1)$ (There can be various homotopy groups). D. Mermin wrote a fruitful review paper on the topics of topology (Rev. Mod. Phys.).
+where the integral counts how many times the $2\pi$ angle is rotated around the contour. (It is sometimes called skyrmion number for $S^2$.) If one traces the direction of a spin on the lattice along a circular loop, one should count the number of spins in the same direction.
 
-### Low-temperature limit of correlation function
+A high winding number $W > 1$ is not usually observed. This can be experimentally observed in a superconductor; \textit{giant vortex}. The homotopic vortices can be distinguished by using XMCD (X-ray Magnetic Circular Dichroism), Lorentz TEM, and NV (Nitrogen vacancy; Nitrogen defect in a diamond) center magnetometry that images the local spin at a nanometer scale.
+
+Let us there is a continuous function $f$ such that $f(0) = f(2\pi)$ that maps between $S^{1}\_{a}$ and $S^{1}\_{b}$ with the parameter; $\theta$. Note that one needs the closed space to define the winding number. Here the winding number classifies the topology and a set of functions can form a group which is called the first homotopy group $\pi_1(S^1)$ (There can be various homotopy groups). D. Mermin wrote a fruitful review paper on the topics of topology (Rev. Mod. Phys.).
+
+## Low-temperature limit of correlation function
 
 In the low-temperature limit, the neighboring spins will be similar to each other ($\theta_i \sim \theta_j$). 
 
 $$
 \begin{equation}
-    \beta H = -K\sum_{\braket{i,j}}\cos{(\theta_i-\theta_j)} \sim -K\sum_{\braket{i,j}}\left[1-\frac{1}{2}(\theta_i-\theta_j)^2\right] = -K\sum_{\braket{i,j}}(\theta_i-\theta_j)^2 + const.
+    \beta H = -K\sum_{\braket{i,j}}\cos{(\theta_i-\theta_j)} \sim -K\sum_{\braket{i,j}}\left[1-\frac{1}{2}(\theta_i-\theta_j)^2\right] = \frac{K}{2}\sum_{\braket{i,j}}(\theta_i-\theta_j)^2 + const.
 \end{equation}
 $$
 
-Taking the continuum limit $\theta_i\rightarrow \theta(r_i)$, the $\beta H$ can be written as
+Taking the continuum limit $\theta_i\rightarrow \theta(r_i)$, the $\beta H$ can be written as:
 
 $$
 \begin{equation}
@@ -93,37 +115,41 @@ $$
 \end{equation}
 $$
 
-The spin correlation function can be evaluated as $\braket{\Re e^{i(\theta_i-\theta_j)}} = \Re\braket{e^{i(\theta_i-\theta_j)}}$. If a random variable $\alpha$ follows the Gaussian distribution then the identity holds: $\braket{e^{i\alpha}} \sim e^{-\frac{1}{2}\braket{\alpha^2}}$. Then the correlation function can be expressed as
+The spin correlation function can be evaluated as $\braket{\Re e^{i(\theta_i-\theta_j)}} = \Re\braket{e^{i(\theta_i-\theta_j)}}$. If a random variable $\alpha$ follows the Gaussian distribution then the identity holds: $\braket{e^{i\alpha}} \sim e^{-\frac{1}{2}\braket{\alpha^2}}$. Then the correlation function can be expressed as:
 
 $$
 \begin{equation}
-    \braket{\mathbf{S}_i\cdot\mathbf{S}_j} = \Re e^{-\frac{1}{2}\braket{(\theta_i-\theta_j)^2}}
+    \braket{\mathbf{S}_\mathbf{0}\cdot\mathbf{S}_\mathbf{r}} = \Re e^{-\frac{1}{2}\braket{(\theta_\mathbf{0}-\theta_\mathbf{r})^2}}
 \end{equation}
 $$
 
-The expectation value is (look up the old lecture notes)
+The expectation value is (look up the old lecture notes):
 
 $$
 \begin{equation}
-    \braket{(\theta_i-\theta_j)^2} = \frac{1}{\pi K}\ln \left(\frac{r}{a}\right)
+	\braket{(\theta_\mathbf{0}-\theta_\mathbf{r})^2} = \frac{1}{\pi K}\ln \left(\frac{r}{a}\right)
 \end{equation}
 $$
 
-Then the correlation function is finally given by
+Then the correlation function is finally given by:
 
 $$
 \begin{equation}
-    \braket{\mathbf{S}_i\cdot\mathbf{S}_j}= \left(\frac{r}{a}\right)^{-\frac{1}{2\pi K}}
+    \braket{\mathbf{S}_\mathbf{0}\cdot\mathbf{S}_\mathbf{r}}= \left(\frac{r}{a}\right)^{-\frac{1}{2\pi K}}
 \end{equation}
 $$
 
-The behaviors of the correlation length in the two limits (low-$T$ and high-$T$) are different. There must be something happening between two different limits. We will discuss it next Wednesday.
+The behaviors of the correlation length in the two limits (low-$T$ and high-$T$) are different. There must be something happening between two different limits!
 
-Q. Why is the vortex called a defect? Imagine a simple diverging spin configuration. For $\theta:\mathrm{R}^2\rightarrow\mathrm{S}^1$, it is well-defined around a loop. However, there must be a singular point inside the loop. When shrinking this loop, this loop can be arbitrarily small so that it converges to a single point. Since $\theta$ is gone (or ill-defined), we call it a defect. This is not the case for skyrmions or solitons.
 
-### Free energy of a vortex
+{: .prompt-info}
+> **Q. Why is the vortex called a defect?**
+>
+Imagine a simple diverging spin configuration. For $\theta:\mathrm{R}^2\rightarrow\mathrm{S}^1$, it is well-defined around a loop. However, there must be a singular point inside the loop. When shrinking this loop, this loop can be arbitrarily small so that it converges to a single point. Since $\theta$ is gone (or ill-defined), we call it a defect. This is not the case for skyrmions or solitons.
 
-To obtain the free energy of a vortex, we need to know the energy of the vortex in order to evaluate the partition function. For the case of $|a\theta \ll 1|$, the continuum form of the Hamiltonian is given by the integration of $(\nabla\theta)^2$. In addition, the vortex is characterized by the winding number with
+## Free energy of a vortex
+
+To obtain the free energy of a vortex, one needs to know the energy of the vortex in order to evaluate the partition function. For the case of $|a\theta \ll 1|$, the continuum form of the Hamiltonian is given by the integration of $(\nabla\theta)^2$, where $a$ is the lattice constant. In addition, the vortex is characterized by the winding number with:
 
 $$
 \begin{equation}
@@ -131,7 +157,7 @@ $$
 \end{equation}
 $$
 
-where $\chi$ is the azimuthal angle of the configuration, $n$ is the winding number, and $\theta_0$ is a constant. This is the stable of the vortex configuration. We need to consider this to calculate the partition function. The gradient of $\chi$ is pointing to the $\hat{e}_{\phi}$ direction. Thus, the gradient of $\theta$ is expressed as
+where $\chi$ is the azimuthal angle of the configuration, $n$ is the winding number, and $\theta_0$ is a constant. This is the stable vortex configuration. Consider the calculating the partition function. The gradient of $\chi$ is pointing to the $\hat{e}_{\phi}$ direction. Thus, the gradient of $\theta$ is expressed as:
 
 $$
 \begin{equation}
@@ -139,23 +165,23 @@ $$
 \end{equation}
 $$
 
-Therefore, the integration of $(\nabla\theta)^2$ is expressed as
+Therefore, the integration of $(\nabla\theta)^2$ is expressed as:
 
 $$
 \begin{equation}
-    \int d^2x (\nabla\theta)^2 = \int d^2x \frac{n^2}{r^2} = 2\pi n^2 \int^{L}_{0} dr \frac{1}{r}
+    \int d^{2}r~(\nabla\theta)^2 = \int d^{2}r~\frac{n^2}{r^2} = 2\pi n^2 \int^{L}_{0} dr \frac{1}{r}
 \end{equation}
 $$
 
-The final form of this integration tells us that it diverges. This divergence comes from the singularity of the vortex that is present at its center. We must exclude this region while doing the integration. (Note that the continuum model fails to capture the free energy of the vortex.) However, there must be some contribution from the center of the vortex. We will compensate for this energy by $\varepsilon^{0}_{n}(a)$ that depends on the winding number $n$. Thus, the integration is given by
+The final form of this integration tells us that it diverges. This divergence (essential singularity) comes from the singularity of the vortex that is present at its center. One must exclude this region while doing the integration. (Note that the continuum model fails to capture the free energy of the vortex.) However, there must be some contribution from the center of the vortex. One will compensate for this energy by $\varepsilon^{0}_{n}(a)$ that depends on the winding number $n$. Thus, the integration is given by:
 
 $$
 \begin{equation}
-    \int d^2x (\nabla\theta)^2 = 2\pi n^2\ln{\frac{L}{a}} + \varepsilon^{0}_{n}(a)
+    \int d^2 r~(\nabla\theta)^2 = 2\pi n^2\ln{\frac{L}{a}} + \varepsilon^{0}_{n}(a)
 \end{equation}
 $$
 
-where $L$ is the system size and $a$ is a short distance cutoff or a size of a vortex core. The energy of the vortex is then written by
+where $L$ is the system size and $a$ is a short distance cutoff or a size of a vortex core. The energy of the vortex is then written by:
 
 $$
 \begin{equation}
@@ -163,7 +189,7 @@ $$
 \end{equation}
 $$
 
-The partition function is then the summation of the Boltzmann factor over all possible configurations for a vortex with the winding number. Since the summation does not run over the Boltzmann factor, the partition function reads
+The partition function is then the summation of the Boltzmann factor over all possible configurations for a vortex with the winding number. Since the summation does not run over the Boltzmann factor, the partition function reads:
 
 $$
 \begin{equation}
@@ -171,25 +197,25 @@ $$
 \end{equation}
 $$
 
-where $2\pi$ prefactor comes from the constant $\theta_0$. The free energy is then given by
+where $2\pi$ prefactor comes from the constant $\theta_0$. In the thermodynamic limit ($L\rightarrow\infty$), the free energy is then given by:
 
 $$
 \begin{align}
     F_n &= -k_BT\left[\ln{2\pi} + 2\ln{\left(\frac{L}{a}\right)} - \pi K n^2 \ln{\left(\frac{L}{a}\right)} - \beta\varepsilon^{0}_{n}(a)\right] \nonumber \\
     &= \varepsilon^{0}_{n}(a) -k_BT\ln{2\pi} - (2 - \pi K n^2)k_BT\ln{\left(\frac{L}{a}\right)} \nonumber \\
-    &= \left[\varepsilon^{0}_{n}(a) + \pi n^2 k_BT\ln{\left(\frac{L}{a}\right)}\right] - 2 k_BT \ln{\left(\frac{L}{a}\right)}
+    &\simeq \left[\varepsilon^{0}_{n}(a) + \pi K n^2 k_BT\ln{\left(\frac{L}{a}\right)}\right] - 2k_BT \ln{\left(\frac{L}{a}\right)}
 \end{align}
 $$
 
-Recall that free energy is defined as $U - TS$ in thermodynamics. Here one can correspond the first term to the internal energy and the second term to the entropy ($S = k_B\ln{\Omega}$). The internal energy in this case is independent of the temperature. At low temperatures ($F\sim U$), the number of vortices is small with the probability $e^{-\beta H}$. On the other hand, it is big at high temperatures ($F \sim -TS$) making the lowest energy with more vortices. Since the core energy $\varepsilon^{0}_{n}(a)$ is a constant with respect to the temperature and it is smaller than other terms, the free energy can be rewritten as
+Recall that free energy is defined as $U - TS$ in thermodynamics. Here one can correspond the first term to the internal energy and the second term to the entropy ($S = k_B\ln{\Omega}$). The internal energy in this case is independent of the temperature. At low temperatures ($F\sim U$), the number of vortices is small with the probability $e^{-\beta H}$. On the other hand, it is big at high temperatures ($F \sim -TS$) making the lowest energy with more vortices. Since the core energy $\varepsilon^{0}_{n}(a)$ is a constant with respect to the temperature and it is smaller than other terms, the free energy can be approximated as:
 
 $$
 \begin{equation}
-    F_n = \pi n^2 k_BT\ln{\left(\frac{L}{a}\right)} - 2 k_BT \ln{\left(\frac{L}{a}\right)}
+    F_n \simeq (\pi K n^2 - 2) k_BT\ln{\left(\frac{L}{a}\right)}
 \end{equation}
 $$
 
-Neglecting all the interactions between the vortices, we can define the critical $K_c = 2/n^2\pi$. The critical temperature can be evaluated from $J/k_B T_c = 2/n^2\pi$. If $T < T_c$, there are a finite number of vortices. However, if $T > T_c$, the free energy is always smaller than zero, and there are infinite numbers of vortices. Note that adding some constant energies does not dramatically change this relation. For $n = 1$, $K_c$ is given by
+Neglecting all the interactions between the vortices, one can define the critical $K_c = 2/n^2\pi$. The critical temperature can be evaluated from $J/k_B T_c = 2/n^2\pi$. If $T < T_c$, there are a finite number of vortices. However, if $T > T_c$, the free energy is always smaller than zero, and there are infinite numbers of vortices. Note that adding some constant energies does not dramatically change this relation. For $n = 1$, $K_c$ is given by:
 
 $$
 \begin{equation}
@@ -197,11 +223,12 @@ $$
 \end{equation}
 $$
 
+<!-- Comment.
+여기까지 수정함. (26.07.13)
+-->
 At low temperatures, the Boltzmann factor is small and the probability to make a vortex is small. Although there is finite energy, the system wants to make many vortices because of the large entropy that leads to the disorder. Across the critical temperature, the system exhibits the proliferation of vortices. This is why the behaviors of the correlation length decay were different. In order to obtain the critical temperature accurately, the interaction between the vortices must be included. We have discussed only the single vortex (only vortices or anti-vortices). We will talk about the partition function when there are vortex and anti-vortex pairs.
 
-<br>
-
-### Partition function of vortices
+## Partition function of vortices
 
 We started with the Hamiltonian
 
@@ -354,6 +381,5 @@ $$
 \Gamma^{\mu} = [\sigma^{\mu},H_{\rm SO}]
 $$
 with the Pauli matrix $\sigma^{\mu}$. The caution is required in the Gilbert damping tensor since the spin and site degrees of freedom are not explicitly written in the Green function.
-
 
 
