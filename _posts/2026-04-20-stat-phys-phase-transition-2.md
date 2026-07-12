@@ -325,36 +325,12 @@ $$
 where $N$ is the number of vortex, $n_i$ is the winding number of a vortex. One can get the critical value using the renormalization group. The $e^{-\beta\varepsilon^{0}_{n_i}}$ is called $y_{n_i}$. This changes the number of particles in the grand canonical ensemble. 
 
 
+---
 
+## References
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+1. Kardar, M. _Statistical Physics of Fields_. (Cambridge University Press, Cambridge, 2007).
+2. 
 
 
 Q. Why people say that a skyrmion has a topological charge?
@@ -378,3 +354,6 @@ $$
 \Gamma^{\mu} = [\sigma^{\mu},H_{\rm SO}]
 $$
 with the Pauli matrix $\sigma^{\mu}$. The caution is required in the Gilbert damping tensor since the spin and site degrees of freedom are not explicitly written in the Green function.
+
+
+
