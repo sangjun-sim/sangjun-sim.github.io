@@ -9,7 +9,7 @@ article[data-toc] > .content > mjx-container[display="true"][data-scrollable] {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-inline: contain;
-  touch-action: pan-x pan-y pinch-zoom;
+  touch-action: pan-y pinch-zoom;
 }
 
 .pdf-viewer {
