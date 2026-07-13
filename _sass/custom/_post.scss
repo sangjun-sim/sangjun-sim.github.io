@@ -5,7 +5,11 @@ article[data-toc] > .content > p {
 }
 
 article[data-toc] > .content > mjx-container[display="true"][data-scrollable] {
-  touch-action: pan-y pinch-zoom;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-inline: contain;
+  touch-action: pan-x pan-y pinch-zoom;
 }
 
 .pdf-viewer {
