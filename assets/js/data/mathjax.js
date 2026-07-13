@@ -1,7 +1,3 @@
----
-layout: compress
----
-
 const mathDisplaySelector =
   'article[data-toc] > .content > mjx-container[display="true"]';
 const mathTouchControllers = new WeakSet();
