@@ -4,6 +4,10 @@ article[data-toc] > .content > p {
   overflow-wrap: break-word;
 }
 
+article[data-toc] > .content > mjx-container[display="true"][data-scrollable] {
+  touch-action: pan-y pinch-zoom;
+}
+
 .pdf-viewer {
   margin: 1.5rem 0;
 }
