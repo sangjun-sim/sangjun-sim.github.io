@@ -1,5 +1,5 @@
 const mathDisplaySelector =
-  'article[data-toc] > .content > mjx-container[display="true"]';
+  'article[data-toc] > .content mjx-container[display="true"]';
 const mathTouchControllers = new WeakSet();
 const touchDirectionThreshold = 8;
 let mathResizeListenerInstalled = false;
