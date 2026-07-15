@@ -1,6 +1,6 @@
 ---
 title: Berezinskii-Kosterlitz-Thouless transition (2)
-date: 2026-04-20 15:00:00 +0900
+date: 2026-07-16 00:00:00 +0900
 categories:
   - Physics
   - Statistical Physics
@@ -14,11 +14,11 @@ toc: true
 
 ## Beyond spin waves: 2D $XY$ model
 
-The phase transition associated with the vortices is called the Berezinskii–Kosterlitz–Thouless (BKT) transition. This transition occurs in a 2D $XY$ model (no $z$-component magnetization), e.g., a 2D superconductor with the complex order parameter with an arbitrary phase factor and 2D $XY$ magnets. If there is a gradient of the phase factor, there is a corresponding probability current (that is proportional to $\text{Im}[\psi^{\*}\partial_i\phi]$). Goldstone fluctuations destroy long-range order at $T > 0$. Topological defects (vortex and anti-vortex, which are the global excitations) play a distinct role. At $T < T_{BKT}$, the vortices attract to each other. The correlation function decays as a power law. However, $T > T_{BKT}$, it decays exponentially, and the vortices are no longer bound and move freely. This cannot be elucidated by Landau's paradigm; that is, it is **not** a symmetry-breaking transition (there is no divergence on the thermodynamic variables). Experimentally, Resnick, *et al*. measured the resistance of 2D superconductors across the BKT transition and discovered that $V \propto I^3$ at $T_{BKT}$ [PRL 47, 1542 (1981)].
+The phase transition associated with the vortices is called the Berezinskii–Kosterlitz–Thouless (BKT) transition [1, 2]. This transition occurs in a 2D  model (no -component magnetization), e.g., a 2D superconductor with the complex order parameter with an arbitrary phase factor and 2D  magnets. If there is a gradient of the phase factor, there is a corresponding probability current (that is proportional to ). Goldstone fluctuations destroy long-range order at . Topological defects (vortex and anti-vortex, which are the global excitations) play a distinct role. At , the vortices attract to each other. The correlation function decays as a power law. However, , it decays exponentially, and the vortices are no longer bound and move freely. This cannot be elucidated by Landau's paradigm; that is, it is not a symmetry-breaking transition (there is no divergence on the thermodynamic variables). Experimentally, Resnick et al. measured the resistive transition of a two-dimensional array of proximity-coupled Josephson junctions and observed nonlinear – characteristics consistent with the BKT picture [3]. The exponent in  reaches  — the value predicted by Halperin–Nelson and Ambegaokar–Halperin–Nelson–Siggia [4, 5], following from the universal jump of the superfluid stiffness at  [6].
 
 {: .prompt-info}
 > **Q. How to distinguish between symmetry-broken phase transition and topological phase transition?**
-
+>
 It can be distinguished by the presence of an order parameter.
 
 ## High-temperature limit of correlation function
@@ -95,11 +95,11 @@ where the integral counts how many times the $2\pi$ angle is rotated around the 
 
 A high winding number $W > 1$ is not usually observed. This can be experimentally observed in a superconductor; \textit{giant vortex}. The homotopic vortices can be distinguished by using XMCD (X-ray Magnetic Circular Dichroism), Lorentz TEM, and NV (Nitrogen vacancy; Nitrogen defect in a diamond) center magnetometry that images the local spin at a nanometer scale.
 
-Let us there is a continuous function $f$ such that $f(0) = f(2\pi)$ that maps between $S^{1}\_{a}$ and $S^{1}\_{b}$ with the parameter; $\theta$. Note that one needs the closed space to define the winding number. Here the winding number classifies the topology and a set of functions can form a group which is called the first homotopy group $\pi_1(S^1)$ (There can be various homotopy groups). D. Mermin wrote a fruitful review paper on the topics of topology (Rev. Mod. Phys.).
+Let us there is a continuous function $f$ such that $f(0) = f(2\pi)$ that maps between $S^{1}\_{a}$ and $S^{1}\_{b}$ with the parameter; $\theta$. Note that one needs the closed space to define the winding number. Here the winding number classifies the topology and a set of functions can form a group which is called the first homotopy group $\pi_1(S^1)$ (There can be various homotopy groups). N. D. Mermin wrote a review paper on the topological theory of defects in ordered media [7].
 
 ## Low-temperature limit of correlation function
 
-In the low-temperature limit, the neighboring spins will be similar to each other ($\theta_i \sim \theta_j$). 
+In the low-temperature limit, the neighboring spins will be similar to each other ($\theta_i \sim \theta_j$). The Hamiltonian can be expanded as:
 
 $$
 \begin{equation}
@@ -111,7 +111,7 @@ Taking the continuum limit $\theta_i\rightarrow \theta(r_i)$, the $\beta H$ can 
 
 $$
 \begin{equation}
-    \beta H = \frac{K}{2} \int dxdy~(\nabla\theta)^2 + const.
+    \beta H = \frac{K}{2} \int d^{2}r~(\nabla\theta)^2 + const.
 \end{equation}
 $$
 
@@ -207,7 +207,7 @@ $$
 \end{align}
 $$
 
-Recall that free energy is defined as $U - TS$ in thermodynamics. Here one can correspond the first term to the internal energy and the second term to the entropy ($S = k_B\ln{\Omega}$). The internal energy in this case is independent of the temperature. At low temperatures ($F\sim U$), the number of vortices is small with the probability $e^{-\beta H}$. On the other hand, it is big at high temperatures ($F \sim -TS$) making the lowest energy with more vortices. Since the core energy $\varepsilon^{0}_{n}(a)$ is a constant with respect to the temperature and it is smaller than other terms, the free energy can be approximated as:
+Recall that free energy is defined as $U - TS$ in thermodynamics. Here one can correspond the first term to the internal energy and the second term to the entropy ($S = k_B\ln{\Omega}$). The internal energy in this case is independent of the temperature. At low temperatures ($F\sim U$), the number of vortices is small with the probability $e^{-\beta H}$. On the other hand, it is big enough at high temperatures ($F \sim -TS$) making the lowest energy with more vortices. Since the core energy $\varepsilon^{0}_{n}(a)$ is a constant with respect to the temperature and it is smaller than other terms, the free energy can be approximated as:
 
 $$
 \begin{equation}
@@ -223,22 +223,19 @@ $$
 \end{equation}
 $$
 
-<!-- Comment.
-여기까지 수정함. (26.07.13)
--->
-At low temperatures, the Boltzmann factor is small and the probability to make a vortex is small. Although there is finite energy, the system wants to make many vortices because of the large entropy that leads to the disorder. Across the critical temperature, the system exhibits the proliferation of vortices. This is why the behaviors of the correlation length decay were different. In order to obtain the critical temperature accurately, the interaction between the vortices must be included. We have discussed only the single vortex (only vortices or anti-vortices). We will talk about the partition function when there are vortex and anti-vortex pairs.
+At low temperatures, the Boltzmann factor is small and the probability to make a vortex is small. Although there is finite energy if the temperature is high, the system wants to make many vortices. Across the critical temperature, the system exhibits the proliferation of vortices. This is why the behaviors of the correlation length decay were different. In order to obtain the critical temperature accurately, the interaction between the vortices must be included. We have discussed only the single vortex (only vortices or anti-vortices). We will talk about the partition function when there are vortex and anti-vortex pairs.
 
 ## Partition function of vortices
 
-We started with the Hamiltonian
+In the last section, one started with the following Hamiltonian in the continuum limit:
 
 $$
 \begin{equation}
-    \beta H = \frac{K}{2} \int dxdy (\nabla\theta)^2 = \frac{K}{2} \int dxdy u^2
+    \beta H = \frac{K}{2} \int d^{2}r~(\nabla\theta)^2 = \frac{K}{2} \int d^{2}r~u^2
 \end{equation}
 $$
 
-Let us find the gradient of $\theta$ ($u = \nabla\theta$, a distortion field). The line integral of this field gives $2\pi$. 
+where the gradient of $\theta$ is written as $u = \nabla\theta$, which is also called a distortion field. The line integral of this field gives $2\pi$:
 
 $$
 \begin{equation}
@@ -246,140 +243,134 @@ $$
 \end{equation}
 $$
 
-If we use the Stokes' theorem, however, we have
+If one uses the Stokes' theorem, however, one obtains the conclusion below:
 
 $$
 \begin{equation}
-    \int dxdy \hat{z}\cdot (\nabla \times u) = 0?
+    \int d^{2}r~\hat{\mathbf{z}}\cdot(\nabla \times u) = 0?
 \end{equation}
 $$
 
-where the curl of this field is zero. The contradiction comes from the fact that the curl of a field is zero if and only if the field is well-defined everywhere. If there is a vortex, $\nabla \times u \neq 0$. One can decompose $u = u_0 + u_1$ by the continuous excitations captured by $u_0$ ($\nabla \times u_0 = 0$) and the vortices captured by $u_1$ ($\nabla \times u_1 \neq 0$). In addition, the surface integral will not change if the contour encloses the core of the vortex. If we shrink the region of integration, the value will not change. For a single vortex, $\hat{z}\cdot (\nabla \times u)$ can be represented as a delta function $2\pi\delta(x)$. This goes the same for the vortices with winding number $n$ at position $x$. Then, one can generalize it
+where the curl of this field is zero. The contradiction comes from the fact that the curl of a field is zero if and only if the field is well-defined everywhere. If there is a vortex (or a singularity), $\nabla \times u \neq 0$. One can decompose $u = u_0 + u_1$ by the continuous excitations captured by $u_0$ ($\nabla \times u_0 = 0$) and the vortices captured by $u_1$ ($\nabla \times u_1 \neq 0$). In addition, the surface integral will not change if the contour encloses the core of the vortex. If one shrinks the region of the integration, the value will not change. For a single vortex, $\hat{\mathbf{z}}\cdot (\nabla \times u)$ can be represented as a delta function $2\pi\delta(r)$. This goes the same for the vortices with winding number $n$ at position $r$. Then, one can generalize it as:
 
 $$
 \begin{equation}
-    \nabla \times u = 2\pi\hat{z}\sum^{N}_{i=1} n_i\delta(x-x_i)
+    \nabla \times u = 2\pi\hat{\mathbf{z}}\sum^{N}_{i=1} n_i\delta(r-r_i)
 \end{equation}
 $$
 
-This is the partial differential equation ($\nabla \times u = f(\mathbf{x})$). There is a trick if we encounter this kind of problem: $u \rightarrow - \nabla \times (\hat{z} \psi)$ as we did in the electrodynamics. Then the equation is given by
+This is the partial differential equation ($\nabla \times u = f(\mathbf{r})$). There is a trick if we encounter this kind of problem; substituting $u \rightarrow - \nabla \times (\hat{\mathbf{z}} \psi)$ as one did in the electrodynamics. Then, the equation is given by:
 
 $$
 \begin{equation}
-    \nabla^2\psi = 2\pi\sum^{N}_{i=1} n_i\delta(x-x_i)
+    \nabla^2\psi = 2\pi\sum^{N}_{i=1} n_i\delta(r-r_i)
 \end{equation}
 $$
 
-We also met this equation (Poisson's equation) in the electrodynamics course. In two-dimensional space, the solution of the equation ($\nabla^2 V = \frac{q}{4\pi\varepsilon}\delta(x-x_i)$) was
+This equation (Poisson's equation) is famous in the electrodynamics course. In two-dimensional space, the solution of the equation:
 
 $$
 \begin{equation}
-    V = \frac{q}{4\pi\varepsilon}\ln{|\mathbf{x}-\mathbf{x}_i|}
+	\nabla^2 V = \frac{q}{4\pi\varepsilon_{0}}\delta(r-r_i)
 \end{equation}
 $$
 
-Similarly, the solution of $\psi$ is 
+was expressed as:
 
 $$
 \begin{equation}
-    \psi(x) = \sum_{i=1}n_i\ln{|\mathbf{x}-\mathbf{x}_i|}
+    V(r) = \frac{q}{4\pi\varepsilon_{0}}\frac{1}{2\pi}\ln{|\mathbf{r}-\mathbf{r}_i|}
 \end{equation}
 $$
 
-In addition, the non-singular $u_0$ can be expressed as the non-singular -$\nabla \phi$. Then the free energy can be rewritten as
+Similarly, the solution of $\psi$ is given by:
+
+$$
+\begin{equation}
+    \psi(r) = \sum_{i=1}n_i\ln{|\mathbf{r}-\mathbf{r}_i|}
+\end{equation}
+$$
+
+Additionally, the non-singular $u_0$ can be expressed as the non-singular $-\nabla \phi$. Then, the free energy can be rewritten as:
 
 $$
 \begin{align}
-    \beta H &= \frac{K}{2} \int dxdy [\nabla\phi - \nabla \times (\hat{z} \psi)]^2 \nonumber\\
-    &= \frac{K}{2} \int dxdy [(\nabla\phi)^2 -2\nabla\phi\cdot(\nabla \times (\hat{z} \psi)) + (\nabla \times (\hat{z} \psi))^2] \nonumber\\
-    &= \frac{K}{2} \int dxdy [(\nabla\phi)^2 + (\nabla \times (\hat{z} \psi))^2] \nonumber\\
-    &= \frac{K}{2} \int dxdy [(\nabla\phi)^2 + (\nabla\psi)^2]
+    \beta H &= \frac{K}{2} \int d^{2}r~[\nabla\phi - \nabla \times (\hat{\mathbf{z}} \psi)]^2 \nonumber\\
+    &= \frac{K}{2} \int d^{2}r~[(\nabla\phi)^2 -2\nabla\phi\cdot\{\nabla \times (\hat{\mathbf{z}} \psi)\} + \{\nabla \times (\hat{\mathbf{z}} \psi)\}^2] \nonumber\\
+    &= \frac{K}{2} \int d^{2}r~[(\nabla\phi)^2 + (\nabla \times \{\hat{\mathbf{z}} \psi)\}^2] \nonumber\\
+    &= \frac{K}{2} \int d^{2}r~[(\nabla\phi)^2 + (\nabla\psi)^2]
 \end{align}
 $$
 
-where the following integration turns out to be zero if we assume the periodic boundary condition. The boundary terms are relevant to the calculation of transport properties. For the discussion of the phase transition, the boundary condition does not affect the results. 
+The integration for $-2\nabla\phi\cdot\{\nabla \times (\hat{\mathbf{z}} \psi)\}$ turns out to be zero if one assumes the periodic boundary condition. (The boundary terms are relevant to the calculation of transport properties. For the discussion of the phase transition, the boundary condition does not affect the results.)
 
 $$
 \begin{equation}
-    \int dx dy -2\nabla\phi\cdot(\nabla \times (\hat{z} \psi)) = \int dx dy -2\nabla\times(\nabla\phi)\cdot\hat{z}\psi = 0
+    \int d^{2}r~[-2\nabla\phi\cdot\{\nabla \times (\hat{\mathbf{z}} \psi)\}] = \int d^{2}r~[-2\nabla\times(\nabla\phi)\cdot\hat{\mathbf{z}}\psi] = 0
 \end{equation}
 $$
 
-The second term can be expressed by
+Instead, the second term $(\nabla\psi)^{2}$ can be expressed by:
 
 $$
 \begin{align}
-    \int dx dy (\nabla\psi)(\nabla\psi) &= -\int dx dy \psi\nabla^2\psi \nonumber\\
-    &= \int dx dy [\sum_{i=1}n_i\ln{|\mathbf{x}-\mathbf{x}_i|}][2\pi\sum_{j=1} n_j\delta(x-x_j)] \nonumber\\
-    &= -2\pi\sum_{i,j} n_in_j\ln{|\mathbf{x}_i-\mathbf{x}_j|}
+    \int d^{2}r~(\nabla\psi)(\nabla\psi) &= -\int d^{2}r~ \psi\nabla^2\psi \nonumber\\
+    &= -\int d^{2}r~\left[\sum_{i=1}n_i\ln{|\mathbf{r}-\mathbf{r}_i|}\times2\pi\sum_{j=1} n_j\delta(r-r_j)\right] \nonumber\\
+    &= -2\pi\sum_{i,j} n_in_j\ln{|\mathbf{r}_i-\mathbf{r}_j|}
 \end{align}
 $$
 
-Then the Hamiltonian is written as
+Then the Hamiltonian is rewritten as:
 
 $$
 \begin{equation}
-    \beta H = \frac{K}{2} \int dxdy (\nabla\phi)^2 -\pi K \sum_{i,j} n_in_j\ln{|\mathbf{x}_i-\mathbf{x}_j|}
+    \beta H = \frac{K}{2} \int d^{2}r~(\nabla\phi)^2 -\pi K \sum_{i,j} n_in_j\ln{|\mathbf{r}_i-\mathbf{r}_j|}
 \end{equation}
 $$
 
-The second term describes the interaction of two vortices. If the vortices have different signs, then the sign of the potential becomes positive so that the distance between the two vortices tends to be small. If $i = j$, it contributes to the self-energy of the vortex. This is related to the core of the vortex. This is analogous to the electrostatics in two-dimensional space. It is conventional to denote this equation by
-
-$$
-\begin{align}
-    \beta H &= \frac{K}{2} \int dxdy (\nabla\phi)^2 \nonumber\\
-    &- 4 \pi^2 K \sum_{i,j} n_in_j C(\mathbf{x}_i-\mathbf{x}_j) \nonumber\\
-    &+ \sum_i\beta\varepsilon^{0}_{n_i}
-\end{align}
-$$
-
-where the second term has the 2D Coulomb potential $C(\mathbf{x}_i-\mathbf{x}_j) = \frac{\ln{|\mathbf{x}_i-\mathbf{x}_j|}}{2\pi}$ and the third term is the self-energy of the vortex. For the winding number $n_i$ and the positions of vortices $\mathbf{x}_i$, the partition function should be given by
+The second term describes the interaction of two vortices. If the vortices have different signs, then the sign of the potential becomes positive so that the distance between the two vortices tends to be small. If $i = j$, it contributes to the self-energy of the vortex. This is related to the core of the vortex. This is analogous to the electrostatics in the two-dimensional space. It is conventional to denote this equation by:
 
 $$
 \begin{equation}
-    Z = \sum_{\text{all possible configurations}}e^{\int dx dy -\frac{K}{2} (\nabla\phi)^2}e^{4 \pi^2 K \sum_{i,j} n_in_j C(\mathbf{x}_i-\mathbf{x}_j)}
+    \beta H = \frac{K}{2} \int d^{2}r~(\nabla\phi)^2 - 4 \pi^2 K \sum_{i<j} n_in_j C(\mathbf{r}_i-\mathbf{r}_j) + \beta\sum_i\varepsilon^{0}_{n_i}
 \end{equation}
 $$
 
-The two exponential terms are independent of each other. The first term comes from the excitation, and the second comes from the vortices. 
+where the second term is the 2D Coulomb potential:
 
 $$
 \begin{equation}
-    Z = \int D[\phi(\mathbf{x})] e^{\int dx dy -\frac{K}{2} (\nabla\phi)^2} \times \sum_{N}\sum_{n_i}\prod^{N}_{i=1} \int dx_i e^{4 \pi^2 K \sum_{i,j} n_in_j C(\mathbf{x}_i-\mathbf{x}_j)}e^{-\beta\varepsilon^{0}_{n_i}}
+C(\mathbf{r}_i-\mathbf{r}_j) = \frac{1}{2\pi}\ln{|\mathbf{r}_i-\mathbf{r}_j|}
+\end{equation}
+$$ 
+
+and the third term is the self-energy of the vortex. For the winding number $n_i$ and the positions of vortices $\mathbf{r}_i$, the partition function is then given by:
+
+$$
+\begin{equation}
+    Z = \sum_{\substack{\text{all possible} \\ \text{configurations}}} \exp\left[-\frac{K}{2} \int d^{2}r~ (\nabla\phi)^2\right] \exp\left[4 \pi^2 K \sum_{i<j} n_in_j C(\mathbf{r}_i-\mathbf{r}_j)\right]
 \end{equation}
 $$
 
-where $N$ is the number of vortex, $n_i$ is the winding number of a vortex. One can get the critical value using the renormalization group. The $e^{-\beta\varepsilon^{0}_{n_i}}$ is called $y_{n_i}$. This changes the number of particles in the grand canonical ensemble. 
+The two exponential terms are independent of each other. The first term comes from the excitation, and the second comes from the vortices. The final form of the partition function is written as:
 
+$$
+\begin{equation}
+    Z = \int D[\phi(\mathbf{r})]~\exp\left[-\frac{K}{2}\int d^{2}r~ (\nabla\phi)^2\right] \times \sum_{N}\sum_{n_i}\prod^{N}_{i=1} e^{-\beta\varepsilon^{0}_{n_i}}\int dr_i~\exp\left[4 \pi^2 K \sum_{i<j} n_in_j C(\mathbf{r}_i-\mathbf{r}_j)\right]
+\end{equation}
+$$
+
+where $N$ is the number of vortex, $n_i$ is the winding number of a vortex. One can get the critical value using the renormalization group.
 
 ---
 
 ## References
 
-1. Kardar, M. _Statistical Physics of Fields_. (Cambridge University Press, Cambridge, 2007).
-2. 
-
-
-Q. Why people say that a skyrmion has a topological charge?
-> Q. What is the physical meaning of the topological charge?
-
-Q. What determines the speed of the skyrmion?
-A. The size of the skyrmion and the (charge/spin?) current determine the speed of the skyrmion. As the size of the skyrmion gets smaller, the skyrmion becomes faster. (Is it correct?)
-
-Q. In which form does the entropy vanish when two skyrmions with the different topological charges meet and annihilate?
-
-Q. How can we calculate the Lande g factor via first-principles?
-Q. How can we extract the spin-orbit coupling Hamiltonian from the DFT results?
-Q. What is the physical origin of the Gilbert damping? (Read more in Kambersky's theory.)
-
-If the questions above are resolved, then the following linear response formula can be used for the evaluation of the Gilbert damping tensor:
-$$
-\alpha^{\mu\nu} = \frac{g}{\braket{\mathbf{S}}\pi}\int\int\left(-\frac{df(\varepsilon)}{d\varepsilon}\right)\text{Tr}[\Gamma^{\mu}\Im G(\Gamma^{\nu})^{\dagger}\Im G] \frac{d^{3}\mathbf{k}}{(2\pi)^{3}} d\varepsilon
-$$
-where $g$ is the Lande g factor, $f(\varepsilon)$ is the Fermi-Dirac distribution, $\Im G$ is the imaginary part of the Green function, and the $\Gamma^{\mu}$ is the torque operator which is given by:
-$$
-\Gamma^{\mu} = [\sigma^{\mu},H_{\rm SO}]
-$$
-with the Pauli matrix $\sigma^{\mu}$. The caution is required in the Gilbert damping tensor since the spin and site degrees of freedom are not explicitly written in the Green function.
-
-
+1. V. L. Berezinskii, "Destruction of long-range order in one-dimensional and two-dimensional systems having a continuous symmetry group. I. Classical systems," _Sov. Phys. JETP_ **32**, 493–500 (1971).
+2. J. M. Kosterlitz and D. J. Thouless, "Ordering, metastability and phase transitions in two-dimensional systems," _J. Phys. C: Solid State Phys._ **6**, 1181–1203 (1973).
+3. D. J. Resnick, J. C. Garland, J. T. Boyd, S. Shoemaker, and R. S. Newrock, "Kosterlitz–Thouless transition in proximity-coupled superconducting arrays," _Phys. Rev. Lett._ **47**, 1542–1545 (1981).
+4. B. I. Halperin and D. R. Nelson, "Resistive transition in superconducting films," _J. Low Temp. Phys._ **36**, 599–616 (1979).
+5. V. Ambegaokar, B. I. Halperin, D. R. Nelson, and E. D. Siggia, "Dynamics of superfluid films," _Phys. Rev. B_ **21**, 1806–1826 (1980).
+6. D. R. Nelson and J. M. Kosterlitz, "Universal jump in the superfluid density of two-dimensional superfluids," _Phys. Rev. Lett._ **39**, 1201–1205 (1977).
+7. N. D. Mermin, "The topological theory of defects in ordered media," _Rev. Mod. Phys._ **51**, 591–648 (1979).
+8. M. Kardar, _Statistical Physics of Fields_ (Cambridge University Press, Cambridge, 2007), Ch. 8. — general reference; the derivation in this post follows this text.
