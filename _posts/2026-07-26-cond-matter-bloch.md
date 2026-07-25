@@ -244,7 +244,7 @@ This will hold for $\mathbf{a}\_{3}$, and there exists a crystal momentum $\math
 
 $$
 \begin{equation}
-\ket{\mathbf{R}} = e^{i\mathbf{k}\cdot\mathbf{R}}\ket{\mathbf{0}}
+\boxed{\ket{\mathbf{R}} = e^{i\mathbf{k}\cdot\mathbf{R}}\ket{\mathbf{0}}}
 \end{equation}
 $$
 <!-- REVIEW: [medium]
@@ -265,6 +265,32 @@ Issue: The physics of this paragraph is correct and well put (an arbitrary degen
 
 This also disposes of the apparent paradox above. Translating a solution does not manufacture an endless supply of new ones: all the translated states $T_{\mathbf{R}}\ket{0}$ lie inside the same $g$-dimensional eigenspace, so at most $g$ of them are linearly independent. In the non-degenerate case $g=1$, and the translated state is the original one up to a phase.
 
+Bloch function is expressed as a function of a phase factor $e^{i\mathbf{k}\cdot\mathbf{r}}$ multiplied by a function $\ket{u_{n\mathbf{k}}}$ that has the periodic symmetry of the lattice ($u_{n\mathbf{k}}(\mathbf{r}) = u_{n\mathbf{k}}(\mathbf{r}-\mathbf{R})$):
+
+$$
+\begin{equation}
+\ket{\psi_{n\mathbf{k}}} = e^{i\mathbf{k}\cdot\mathbf{r}}\ket{u_{n\mathbf{k}}}
+\end{equation}
+$$
+
+with the crystal momentum $\mathbf{k}$ that labels the state, and the band index $n$. If one applies the translation operator for both sides, one gets:
+
+$$
+\begin{align}
+T_{\mathbf{R}}\ket{\psi_{n\mathbf{k}}} &= T_{\mathbf{R}}[e^{i\mathbf{k}\cdot\mathbf{r}}\ket{u_{n\mathbf{k}}}] \nonumber \\
+&= e^{i\mathbf{k}\cdot(\mathbf{r}-\mathbf{R})}\ket{u_{n\mathbf{k}}}
+\end{align}
+$$
+
+This is another statement that the eigenvalue of a Bloch state for the translation operator is given by the phase factor $e^{-i\mathbf{k}\cdot\mathbf{R}}$. Multiplying $\bra{\mathbf{r}}$, the relationship leads to:
+
+$$
+\begin{gather}
+\braket{\mathbf{r}|T_{\mathbf{R}}|\psi_{n\mathbf{k}}} = \braket{\mathbf{r}-\mathbf{R}|\psi_{n\mathbf{k}}} = e^{i\mathbf{k}\cdot(\mathbf{r}-\mathbf{R})}\braket{\mathbf{r}|u_{n\mathbf{k}}} \rightarrow e^{-i\mathbf{k}\cdot\mathbf{R}}\braket{\mathbf{r}|\psi_{n\mathbf{k}}}, \nonumber \\\\
+\boxed{\therefore \braket{\mathbf{r}-\mathbf{R}|\psi_{n\mathbf{k}}} = e^{-i\mathbf{k}\cdot\mathbf{R}}\braket{\mathbf{r}|\psi_{n\mathbf{k}}}}
+\end{gather}
+$$
+
 ---
 
 ## References
@@ -283,4 +309,3 @@ Recommended change: Fill in Ref. 2 (or delete the blank entry) and add a referen
 [medium] Info box: $e^{i\phi}$ is the Aharonov-Bohm unit-cell flux phase $2\pi\Phi/\Phi_0$ of magnetic translation operators, not "the Peierls phase" (verify vs Zak 1964).
 [low] Line 25: state $n_i\in\mathbb{Z}$. Line 177/Eq. 10: note $d_{11}\neq d_{22}$ assumption. Info box: "abelian" is a group property. "[Not Safe]" draft marker; empty Ref. 2; specify Ziman edition.
 -->
-

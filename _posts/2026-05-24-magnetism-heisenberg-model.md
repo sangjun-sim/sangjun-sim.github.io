@@ -16,9 +16,17 @@ The Hamiltonian of the Heisenberg model is represented as:
 
 $$ \begin{equation} H = \sum\limits_{\braket{ij}}J_{ij}\mathbf{S}_{i}\cdot\mathbf{S}_{j} \end{equation} $$
 
-where the sum $i$ and $j$ run over all lattice sites and $J_{ij}$ refers to the exchange constant. If $J<0$, the energy is minimized when the spins are parallel to each other (ferromagnet). If $J>0$, the antiparallel orientation is preferred, which is called antiferromagnet. Rewritting the spin operators in terms of creation/annihilation operators:
+where the sum $i$ and $j$ run over all lattice sites and $J_{ij}$ refers to the exchange constant. If $J<0$, the energy is minimized when the spins are parallel to each other (ferromagnet). If $J>0$, the antiparallel orientation is preferred, which is called antiferromagnet. Rewritting the spin operators in terms of ladder operators:
 
 $$ \begin{align} S^{+}_{j} &= S^{x}_{j}+iS^{y}_{j}, \nonumber \\ S^{-}_{j} &= S^{x}_{j}-iS^{y}_{j}, \end{align} $$
+
+such that:
+
+$$
+\begin{align}
+[S^{z}_{j},S^{\pm}_{j}] = \pm S^{\pm}_{j},~\text{and}~[S^{+}_{j},S^{-}_{j}] = 2S^{z}_{j}
+\end{align}
+$$
 
 The Hamiltonian is then expressed as:
 
