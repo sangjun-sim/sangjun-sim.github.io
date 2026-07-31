@@ -1,6 +1,6 @@
 ---
 title: A short note on the Bloch theorem
-date: 2026-07-27 17:00:00 +0900
+date: 2026-07-31 17:00:00 +0900
 categories:
   - Physics
   - Condensed Matter
