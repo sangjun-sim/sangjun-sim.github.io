@@ -10,6 +10,12 @@ math: true
 toc: true
 ---
 
+## Check the worktree status
+
+``` shell
+git status --short --branch && git diff --stat && git log -1 --oneline
+```
+
 ## Find committed files in the repository history
 
 In order to find the uploaded files, one uses this command:
