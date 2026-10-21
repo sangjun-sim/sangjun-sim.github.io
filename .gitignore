@@ -30,6 +30,9 @@ assets/js/dist
 AGENTS.md
 CLAUDE.md
 
+# Local drafts
+/_drafts/
+
 # Markdown publishing policy
 *.md
 !_posts/*.md
