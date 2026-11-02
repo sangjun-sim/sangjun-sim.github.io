@@ -3,7 +3,6 @@ title: Topology
 date: 2026-04-29 19:00:00 +0900
 categories:
   - Physics
-  - Topology
 tags:
   - math
   - mathematical-physics

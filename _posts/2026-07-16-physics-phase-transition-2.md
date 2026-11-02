@@ -3,7 +3,6 @@ title: Berezinskii-Kosterlitz-Thouless transition (2)
 date: 2026-07-16 00:00:00 +0900
 categories:
   - Physics
-  - Statistical Physics
 tags:
   - physics
   - phase-transition
