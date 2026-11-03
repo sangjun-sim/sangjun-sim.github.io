@@ -3,7 +3,7 @@ title: How to use Launchd?
 date: 2026-05-21 15:00:00 +0900
 categories:
   - Programming
-  - Automation
+  - Others
 tags:
   - automation
   - launchd
