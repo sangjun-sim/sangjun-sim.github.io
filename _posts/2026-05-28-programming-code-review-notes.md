@@ -3,6 +3,7 @@ title: Reviewing Codes
 date: 2026-05-28 11:00:00 +0900
 categories:
   - Programming
+  - Others
 tags:
   - refactoring
 math: true

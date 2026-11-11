@@ -3,6 +3,7 @@ title: "Docker - Basics"
 date: 2026-05-20 15:00:00 +0900
 categories:
   - Programming
+  - Others
 tags:
   - docker
 math: true
