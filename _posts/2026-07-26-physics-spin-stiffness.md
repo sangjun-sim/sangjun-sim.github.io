@@ -60,7 +60,7 @@ H(\theta_{i},\theta_{j}) &= \sum\limits_{\braket{ij}}J_{ij}\left[\frac{1}{2}(S^{
 \end{align}
 $$
 
-where $\theta\_{ij}$ is the difference of angles $\theta\_{i}$ and $\theta\_{j}$ ($\theta\_{ij} \equiv \theta\_{i} - \theta\_{j}$), $\mathcal{J}\_{ij}$ is the spin current operator, and $\mathcal{T}\_{ij}$ is referred to as the spin kinetic energy since they have similar forms with the fermionic current and hopping operators:
+where $\theta_{ij}$ is the difference of angles $\theta_{i}$ and $\theta_{j}$ ($\theta_{ij} \equiv \theta_{i} - \theta_{j}$), $\mathcal{J}_{ij}$ is the spin current operator, and $\mathcal{T}_{ij}$ is referred to as the spin kinetic energy since they have similar forms with the fermionic current and hopping operators:
 
 $$
 \begin{align}

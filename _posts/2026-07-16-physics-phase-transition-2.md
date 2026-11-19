@@ -94,7 +94,7 @@ where the integral counts how many times the $2\pi$ angle is rotated around the 
 
 A high winding number $W > 1$ is not usually observed. This can be experimentally observed in a superconductor; \textit{giant vortex}. The homotopic vortices can be distinguished by using XMCD (X-ray Magnetic Circular Dichroism), Lorentz TEM, and NV (Nitrogen vacancy; Nitrogen defect in a diamond) center magnetometry that images the local spin at a nanometer scale.
 
-Let us there is a continuous function $f$ such that $f(0) = f(2\pi)$ that maps between $S^{1}\_{a}$ and $S^{1}\_{b}$ with the parameter; $\theta$. Note that one needs the closed space to define the winding number. Here the winding number classifies the topology and a set of functions can form a group which is called the first homotopy group $\pi_1(S^1)$ (There can be various homotopy groups). N. D. Mermin wrote a review paper on the topological theory of defects in ordered media [7].
+Let us there is a continuous function $f$ such that $f(0) = f(2\pi)$ that maps between $S^{1}_{a}$ and $S^{1}_{b}$ with the parameter; $\theta$. Note that one needs the closed space to define the winding number. Here the winding number classifies the topology and a set of functions can form a group which is called the first homotopy group $\pi_1(S^1)$ (There can be various homotopy groups). N. D. Mermin wrote a review paper on the topological theory of defects in ordered media [7].
 
 ## Low-temperature limit of correlation function
 
@@ -148,7 +148,7 @@ Imagine a simple diverging spin configuration. For $\theta:\mathrm{R}^2\rightarr
 
 ## Free energy of a vortex
 
-To obtain the free energy of a vortex, one needs to know the energy of the vortex in order to evaluate the partition function. For the case of $|a\theta \ll 1|$, the continuum form of the Hamiltonian is given by the integration of $(\nabla\theta)^2$, where $a$ is the lattice constant. In addition, the vortex is characterized by the winding number with:
+To obtain the free energy of a vortex, one needs to know the energy of the vortex in order to evaluate the partition function. For the case of $\lvert a\theta \ll 1\rvert$, the continuum form of the Hamiltonian is given by the integration of $(\nabla\theta)^2$, where $a$ is the lattice constant. In addition, the vortex is characterized by the winding number with:
 
 $$
 \begin{equation}

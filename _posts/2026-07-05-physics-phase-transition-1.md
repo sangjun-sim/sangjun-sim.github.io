@@ -28,7 +28,7 @@ $$
 H_{\rm XY} \simeq -J\sum\limits_{\braket{ij}}\left[1-\frac{1}{2}(\phi_{i}-\phi_{j})^{2}\right] = E + \frac{J}{2}\sum\limits_{\braket{ij}}(\phi_{i}-\phi_{j})^{2}
 $$
 
-where $E$ is the sum of the exchange interaction between the site $i$ and $j$; $E = -J\sum\_{\braket{ij}}1 = -JN\_{b}$, where $N_{b}$ is the number of nearest-neighbor bonds. The second term must be highlighted: The form is applied to the discrete lattice model. Here, the sum over the first nearest neighbors corresponds to the discrete Laplacian operator; see H. J. Jensen's Lecture note [2]. However, in the continuum limit, where the system size $L$ is larger than the lattice spacing $a$, $\phi_{i}$ becomes $\phi(\mathbf{r}_{i})$. Thus, the second term is expressed as:
+where $E$ is the sum of the exchange interaction between the site $i$ and $j$; $E = -J\sum_{\braket{ij}}1 = -JN_{b}$, where $N_{b}$ is the number of nearest-neighbor bonds. The second term must be highlighted: The form is applied to the discrete lattice model. Here, the sum over the first nearest neighbors corresponds to the discrete Laplacian operator; see H. J. Jensen's Lecture note [2]. However, in the continuum limit, where the system size $L$ is larger than the lattice spacing $a$, $\phi_{i}$ becomes $\phi(\mathbf{r}_{i})$. Thus, the second term is expressed as:
 
 $$
 \begin{align}

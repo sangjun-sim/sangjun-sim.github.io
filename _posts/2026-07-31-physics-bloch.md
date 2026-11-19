@@ -21,7 +21,7 @@ V(\mathbf{r}) = T_{\mathbf{R}}V(\mathbf{r}) = V(\mathbf{r}-\mathbf{R})
 \end{equation}
 $$
 
-where $\mathbf{R}$ is the Bravais lattice vector, which is expressed as $\mathbf{R} = n_{1}\mathbf{a}\_{1} + n_{2}\mathbf{a}\_{2} + n_{3}\mathbf{a}\_{3}$.
+where $\mathbf{R}$ is the Bravais lattice vector, which is expressed as $\mathbf{R} = n_{1}\mathbf{a}_{1} + n_{2}\mathbf{a}_{2} + n_{3}\mathbf{a}_{3}$.
 
 
 In addition, the action of $T_{\mathbf{R}}$ on the $n$th derivatives of a function $f(\mathbf{r})$ yields: 
@@ -55,7 +55,7 @@ In other words, $H(\mathbf{r}) = H(\mathbf{r}-\mathbf{R})$. To grasp its physica
 
 Apparently, it seems one can obtain an infinite degeneracy in the energy only by changing $\mathbf{R}$. It is because one can think of the translated images of $\ket{\mathbf{r}}$ are independent of each other. However, this intuition is false.
 
-This can be resolved by the following example: First, assume that $\ket{\mathbf{0}} = \ket{\mathbf{r}=\mathbf{0}}$ is two-fold degenerate with two states $\ket{\mathbf{0}^{(1)}}$ and $\ket{\mathbf{0}^{(2)}}$ as in the case of Ziman (p. 17). The translation $T$ of $\ket{\mathbf{0}}$ by $\mathbf{a}\_{1}$ gives:
+This can be resolved by the following example: First, assume that $\ket{\mathbf{0}} = \ket{\mathbf{r}=\mathbf{0}}$ is two-fold degenerate with two states $\ket{\mathbf{0}^{(1)}}$ and $\ket{\mathbf{0}^{(2)}}$ as in the case of Ziman (p. 17). The translation $T$ of $\ket{\mathbf{0}}$ by $\mathbf{a}_{1}$ gives:
 
 $$
 \begin{equation}
@@ -167,10 +167,10 @@ c_{21} & c_{22}
 \end{equation}
 $$
 
-Since the norm of states $\{\ket{\tilde{\mathbf{a}}^{(i)}\_{1}}\}$ is equal to $1$, $d_{11}$ and $d_{22}$ are given by $e^{ik_{1}}$ and $e^{ik_{1}'}$, respectively. Note that $k_{1}$ and $k_{1}'$ are called the crystal momenta and have the same direction. However, their magnitudes are different.
+Since the norm of states $\{\ket{\tilde{\mathbf{a}}^{(i)}_{1}}\}$ is equal to $1$, $d_{11}$ and $d_{22}$ are given by $e^{ik_{1}}$ and $e^{ik_{1}'}$, respectively. Note that $k_{1}$ and $k_{1}'$ are called the crystal momenta and have the same direction. However, their magnitudes are different.
 
 
-Now, think of the translation $T$ of $\ket{\mathbf{0}}$ by $\mathbf{a}\_{2}$. This operator commutes with the translation by $\mathbf{a}\_{1}$. This is because $T_{\mathbf{a}\_{1}}T_{\mathbf{a}\_{2}}$ and $T_{\mathbf{a}\_{2}}T_{\mathbf{a}\_{1}}$ to $\ket{\mathbf{0}}$ result in the same state $\ket{\mathbf{a}\_{1}+\mathbf{a}\_{2}}$ (identical with $\ket{\mathbf{a}\_{2}+\mathbf{a}\_{1}}$):
+Now, think of the translation $T$ of $\ket{\mathbf{0}}$ by $\mathbf{a}_{2}$. This operator commutes with the translation by $\mathbf{a}_{1}$. This is because $T_{\mathbf{a}_{1}}T_{\mathbf{a}_{2}}$ and $T_{\mathbf{a}_{2}}T_{\mathbf{a}_{1}}$ to $\ket{\mathbf{0}}$ result in the same state $\ket{\mathbf{a}_{1}+\mathbf{a}_{2}}$ (identical with $\ket{\mathbf{a}_{2}+\mathbf{a}_{1}}$):
 
 $$
 \begin{equation}
@@ -181,7 +181,7 @@ T_{\mathbf{a}_{1}}T_{\mathbf{a}_{2}}\ket{\mathbf{0}} &= T_{\mathbf{a}_{1}}\ket{\
 \end{equation}
 $$
 
-This indicates that there is a matrix that simultaneously diagonalizes $T_{\mathbf{a}\_{1}}$ and $T_{\mathbf{a}\_{2}}$. 
+This indicates that there is a matrix that simultaneously diagonalizes $T_{\mathbf{a}_{1}}$ and $T_{\mathbf{a}_{2}}$.
 
 
 {: .prompt-info }
@@ -189,14 +189,14 @@ This indicates that there is a matrix that simultaneously diagonalizes $T_{\math
 > 
 $$
 \begin{equation}
-\boxed{T_{\mathbf{a}\_{1}}T_{\mathbf{a}\_{2}} = T_{\mathbf{a}\_{2}}T_{\mathbf{a}\_{1}}.}
+\boxed{T_{\mathbf{a}_{1}}T_{\mathbf{a}_{2}} = T_{\mathbf{a}_{2}}T_{\mathbf{a}_{1}}.}
 \end{equation}
 $$
 >
-> This implies that the translation operator is *abelian*. However, if there is a uniform magnetic field, such a path independence does not hold anymore; $T_{\mathbf{a}\_{1}}T_{\mathbf{a}\_{2}} \neq T_{\mathbf{a}\_{2}}T_{\mathbf{a}\_{1}}$, instead $T_{\mathbf{a}\_{1}}T_{\mathbf{a}\_{2}} = e^{i\phi}T_{\mathbf{a}\_{2}}T_{\mathbf{a}\_{1}}$, where the additional phase factor $e^{i\phi}$ is called "Peierls phase."
+> This implies that the translation operator is *abelian*. However, if there is a uniform magnetic field, such a path independence does not hold anymore; $T_{\mathbf{a}_{1}}T_{\mathbf{a}_{2}} \neq T_{\mathbf{a}_{2}}T_{\mathbf{a}_{1}}$, instead $T_{\mathbf{a}_{1}}T_{\mathbf{a}_{2}} = e^{i\phi}T_{\mathbf{a}_{2}}T_{\mathbf{a}_{1}}$, where the additional phase factor $e^{i\phi}$ is called "Peierls phase."
 
 
-That is, $\{\ket{\tilde{\mathbf{a}}^{(i)}\_{2}}\}$ will be expressed as:
+That is, $\{\ket{\tilde{\mathbf{a}}^{(i)}_{2}}\}$ will be expressed as:
 
 $$
 \begin{equation}
@@ -204,7 +204,7 @@ $$
 \end{equation}
 $$
 
-This will hold for $\mathbf{a}\_{3}$, and there exists a crystal momentum $\mathbf{k}$ such that:
+This will hold for $\mathbf{a}_{3}$, and there exists a crystal momentum $\mathbf{k}$ such that:
 
 $$
 \begin{equation}

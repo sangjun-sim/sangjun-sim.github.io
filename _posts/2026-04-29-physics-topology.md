@@ -112,7 +112,7 @@ It is a representative example of the Heine-Borel theorem, which states that a s
 
 ## Homeomorphism
 
-A continuous function is a function from a topological space $(S,\sigma)$ to another one $(T,\tau)$, $F: S \rightarrow T$ such that its inverse image $F^{-1}: T \rightarrow S$ is an open set in $(S,\sigma)$. Here, consider two topological spaces $\mathcal{T}\_{1}$ and $\mathcal{T}\_{2}$. For a continuous map between these spaces $f: \mathcal{T}\_{1} \rightarrow \mathcal{T}\_{2}$, if its **reverse** map ($f^{-1}: \mathcal{T}\_{2} \rightarrow \mathcal{T}\_{1}$) **exists** and is also **continuous**; it is a homeomorphism. (The additional continuity condition makes a difference from the concept of isomorphism.) Two spaces are said to be topologically equivalent if there is such a one-to-one correspondence:
+A continuous function is a function from a topological space $(S,\sigma)$ to another one $(T,\tau)$, $F: S \rightarrow T$ such that its inverse image $F^{-1}: T \rightarrow S$ is an open set in $(S,\sigma)$. Here, consider two topological spaces $\mathcal{T}_{1}$ and $\mathcal{T}_{2}$. For a continuous map between these spaces $f: \mathcal{T}_{1} \rightarrow \mathcal{T}_{2}$, if its **reverse** map ($f^{-1}: \mathcal{T}_{2} \rightarrow \mathcal{T}_{1}$) **exists** and is also **continuous**; it is a homeomorphism. (The additional continuity condition makes a difference from the concept of isomorphism.) Two spaces are said to be topologically equivalent if there is such a one-to-one correspondence:
 
 $$
 \begin{equation}
