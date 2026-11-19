@@ -265,7 +265,7 @@ H(\mathbf{M}_{3}) = -t\begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 2 \\ 0 & 2 & 0 \end{b
 \end{align}
 $$
 
-When one calculates the form factor for scattering between $$\mathbf{M}$$ points, $$F(\mathbf{M}_{i},\mathbf{M}_{j}) = 0$$ for scattering at the same $$\mathbf{M}$$ point. This implies that: Even though $$\mathbf{Q}$$ is a good nesting vector, the interaction can be smaller. On the other hand, if two Fermi surface points share the same dominant sublattice character, the scattering from local Hubbard interaction becomes stronger. This is called sublattice interference.
+When one calculates the form factor for scattering between $$\mathbf{M}$$ points, $$F(\mathbf{M}_{i},\mathbf{M}_{j}) = 0$$ for scattering at the same $$\mathbf{M}$$ point. This implies that: Even though $$\mathbf{Q}$$ is a good nesting vector, the interaction can be smaller. On the other hand, if two Fermi surface points share the same dominant sublattice character, the scattering from local Hubbard interaction becomes stronger. This is called sublattice interference.[^m-type-counterexample]
 
 Honeycomb model demonstrates Fermi surface topology and density of states as in Kagome. However, the sublattice weight around Van Hove filling is relatively homogeneous. Hence, honeycomb case does not show sublattice interference. This is why superconducting eigenvalue is larger in Honeycomb model in the result of weak-coupling-limit RG calculation.
 
@@ -274,3 +274,23 @@ Honeycomb model demonstrates Fermi surface topology and density of states as in 
 ### Effect of longer-range interaction
 
 If nearest-neighbor interaction $$U_1$$ is included, there is a density-density interaction between different sublattices. In this case, the interaction vertex is no longer diagonal with respect to sublattice index. Moreover, there can be new scattering channel between sublattice components. Owing to this, long-range Hubbard interaction in Kagome Hubbard model relaxes sublattice interference and increases pairing scale.
+
+<!----
+[^m-type-counterexample]: **Counterexample: orthogonal Bloch states with finite m-type form factor.** For $$t>0$$, the Hamiltonian above has an m-type VHS at $$\varepsilon=-2t$$, with normalized sublattice spinors
+
+    $$
+    u_1\equiv u_m(\mathbf{M}_1)=\frac{1}{\sqrt{2}}\begin{pmatrix}1\\0\\1\end{pmatrix},\qquad
+    u_2\equiv u_m(\mathbf{M}_2)=\frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\\0\end{pmatrix}.
+    $$
+
+    Thus $$F(\mathbf{M}_2,\mathbf{M}_1)=u_2^\dagger u_1=1/2\neq0$$ in this convention. The full Bloch states are nevertheless orthogonal: $$\langle\psi_{m\mathbf{M}_2\sigma}|\psi_{m\mathbf{M}_1\sigma}\rangle=0$$ because the lattice sum of Bloch phases vanishes for distinct momenta. Full-state orthogonality therefore does not require orthogonal sublattice spinors. For comparison, the p-type result $$F(\mathbf{M}_i,\mathbf{M}_j)=0$$ applies to distinct M points ($$i\neq j$$), while $$F(\mathbf{M}_i,\mathbf{M}_i)=1$$.
+
+    The momentum-conserving, opposite-spin scattering $$(\mathbf{M}_1\uparrow,\mathbf{M}_2\downarrow)\to(\mathbf{M}_2\uparrow,\mathbf{M}_1\downarrow)$$ has the onsite vertex
+
+    $$
+    \Gamma=U\sum_\alpha u_{2\alpha}^{*}u_{1\alpha}u_{1\alpha}^{*}u_{2\alpha}
+    =U\sum_\alpha|u_{1\alpha}|^2|u_{2\alpha}|^2=\frac{U}{4}\neq0,
+    $$
+
+    since both states have weight $$1/2$$ on sublattice $$A$$; its coefficient in $$H_1$$ is $$\Gamma/N$$. In general, the onsite vertex requires a single sum over the common sublattice index of all four amplitudes and does **not** factorize as the separately summed $$U F F$$ written above. See [Wu, Thomale, and Raghu, Eq. (14)](https://arxiv.org/html/2211.01388v2). This example is restricted to the nearest-neighbor model at the exact M points.
+---->
